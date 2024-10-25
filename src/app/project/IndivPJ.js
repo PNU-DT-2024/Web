@@ -4,7 +4,7 @@ export default function IndivPJ({ indiv, mobile, tablet }) {
     return (
         <div className={`${styles.memberCard} ${mobile || tablet? styles.m_card:''}`}>
             <div>
-                <img src="/img/posterImg/posterImg.png" alt={indiv.name}  className={styles.imgPj}/>
+                <img src="/asset/poster/poster.png" alt={indiv.name}  className={styles.imgPj}/>
             </div>
             <div className={`${mobile ? styles.m_Info : styles.Info} ${styles.memberInfo} column`}>
                 <h2>{indiv.mainTitle}</h2>

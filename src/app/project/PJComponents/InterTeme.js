@@ -22,11 +22,11 @@ export default function InterTheme({ title, desc, format, step }) {
                 </div>
                 <div className={`interStep  ${isMobile ? 'column' : 'row'}`}>
                     <div className='imgInter' >
-                        <img src="/img/project/web_map.png" alt="#" />
+                        <img src="/asset/project/web_map.png" alt="#" />
                     </div>
                     <div className={`${isMobile ? 'm_step' : 'step'} row`}>
                         {step.map((item, idx) => (
-                            <InterStep key={idx} imgUrl={`/img/project/web_step${idx + 1}.png`} step={item} />
+                            <InterStep key={idx} imgUrl={`/asset/project/web_step${idx + 1}.png`} step={item} />
                         ))}
                     </div>
                 </div>

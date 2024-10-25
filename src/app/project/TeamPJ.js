@@ -13,7 +13,7 @@ function TeamPJ({ data }) {
             <div className={`${styles.teamCard} ${isMobile ? `${styles.m_card} column` : 'row'}`}>
                 <div className={styles.imgPj}>
                     <div>
-                        <img src="/img/video/videoImg.png" alt="PROJECT 이미지" />
+                        <img src="/asset/video/videoImg.png" alt="PROJECT 이미지" />
                     </div>
                     <div>
                         <p>프로젝트 보러가기</p>

@@ -31,7 +31,7 @@
 .left .imgSign {
   position: absolute;
   width: 100px;
-  background-color: #a7a7a7;
+  /* background-color: #a7a7a7; */
   right: 0;
   top: 0;
 }
@@ -81,7 +81,7 @@
   font-size: 1.125rem;
   font-weight: 300;
   color: #a7a7a7;
-
+  text-transform: uppercase;
 }
 
 .top .sns {
@@ -104,31 +104,48 @@
   font-weight: 300;
 }
 
-.top .sns div:first-child span:last-child {
-  text-decoration: underline;
-  text-underline-position: under;
-}
-
 .bottom {
   justify-content: space-between;
   gap: 12px;
 }
 
-.bottom>a {
+.bottom a {
+  position: relative;
+  /* Link 요소에 상대적 위치 지정 */
   flex: 1;
   background-color: rgb(107, 107, 107);
-  padding: 12px;
   align-items: center;
   color: white;
+  height: 150px;
+  overflow: hidden;
 }
 
-.bottom>a p:nth-of-type(1) {
+.bottom a div:first-child {
+  position: relative;
+  height: 100%;
+}
+
+.bottom a div:first-child img {
+  width: 100%;
+  height: 100%;
+  filter: brightness(0.4);
+  object-fit: cover;
+}
+
+.bottom a div:last-child {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 24px;
+}
+
+.bottom a div:last-child p:nth-of-type(1) {
   font-size: 0.875rem;
   font-weight: 300;
   margin-bottom: 8px;
 }
 
-.bottom>a p:nth-of-type(2) {
+.bottom a div:last-child p:nth-of-type(2) {
   font-size: 1.25rem;
 }
 
@@ -182,4 +199,9 @@
 .m_profile .right .top .sns div span:last-child,
 .m_profile .right .top .sns div a {
   flex: 3;
+}
+
+.m_profile .bottom a {
+  flex: 1;
+
 }

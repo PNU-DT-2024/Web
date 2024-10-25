@@ -21,7 +21,7 @@ export default function Cursor() {
             }}
             onMouseMove={xyHandler}
         >
-            <img src="/img/icon/mask.svg" alt="cursor" style={{ width: '100%' }} />
+            <img src="/asset/icon/mask.svg" alt="cursor" style={{ width: '100%' }} />
         </div >
     );
 }

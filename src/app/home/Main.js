@@ -19,18 +19,6 @@ export default function Main() {
   function startInter() {
     setInter(!inter);
   }
-  const leftMotion = {
-    initial: { opacity: 0, x: -100 },
-    whileInView: { opacity: 1, x: 0 },
-    viewport: { once: false },
-    transition: { ease: "easeInOut", duration: 0.8 },
-  };
-  const rightMotion = {
-    initial: { opacity: 0, x: 100 },
-    whileInView: { opacity: 1, x: 0 },
-    viewport: { once: false },
-    transition: { ease: "easeInOut", duration: 0.8 },
-  };
   const bottomMotion = {
     initial: { opacity: 0, y: 100 },
     whileInView: { opacity: 1, y: 0 },
@@ -54,7 +42,7 @@ export default function Main() {
     const currentTime = new Date();
     const timeDifference = openingDate - currentTime;
 
-    const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    const days = 32-currentTime.getDate();
     const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
@@ -128,8 +116,8 @@ export default function Main() {
               <div className={`${styles.content} ${isMobile ? styles.m_twocolumn : styles.twoRow} ${styles.mainPoster}`}>
                 <motion.div {...bottomMotion}>
                   <div className={styles.left}>
-                    {/* <img src="/img/mainPoster.png" alt="메인 포스터<버릇>" /> */}
-                    <video src="/img/posterImg/main_poster.mp4" autoPlay muted loop></video>
+                    {/* <img src="/asset/mainPoster.png" alt="메인 포스터<버릇>" /> */}
+                    <video src="/asset/poster/main_poster.mp4" autoPlay muted loop></video>
 
                   </div>
                 </motion.div>
@@ -171,7 +159,7 @@ export default function Main() {
               </motion.div>
               <div className={`${styles.content} ${styles.opening}`}>
                 <motion.div {...bottomMotion}>
-                  <video src="/img/opening/opening.mkv" controls />
+                  <video src="/asset/opening/opening.mkv" controls />
                 </motion.div>
               </div>
             </div>
@@ -188,29 +176,29 @@ export default function Main() {
               <div className={`${styles.content} ${isMobile ? styles.m_twocolumn : styles.twoRow} ${styles.memberDT}`}>
                 <motion.div {...bottomMotion}>
                   <div className={styles.left}>
-                    <img src="/img/profileImg/all_profile.png" alt="DT 프로필" />
+                    <img src="/asset/profile/all_profile.png" alt="DT 프로필" />
                   </div>
                 </motion.div>
 
                 <motion.div {...bottomMotion}>
                   <div className={`${styles.right} column`}>
-                    <div className="row">
+                    <div className={isMobile?'column':'row'}>
                       <p>위원장</p>
                       <p>이상화</p>
                     </div>
-                    <div className="row">
+                    <div className={isMobile?'column':'row'}>
                       <p>부위윈장</p>
                       <p>이지은</p>
                     </div>
-                    <div className="row">
+                    <div className={isMobile?'column':'row'}>
                       <p>BRANDING</p>
                       <p>이상화 · 이지은 · 박서해 · 왕신웨 </p>
                     </div>
-                    <div className="row">
+                    <div className={isMobile?'column':'row'}>
                       <p>WEB</p>
                       <p>김경린 · 긴은선 · 박정혜 · 최시아</p>
                     </div>
-                    <div className="row">
+                    <div className={isMobile?'column':'row'}>
                       <p>DP</p>
                       <p>조성원 · 김동성 · 박승찬 · 오여슬 · 이민서</p>
                     </div>
@@ -243,9 +231,9 @@ export default function Main() {
                     <div className={styles.right}>
                       <p>부산 디자인 진흥원 1층 전시장</p>
                       <div>
-                        <p>2024.11.01 ~ 11.04</p>
+                        <p>2024.11.02 ~ 11.04</p>
                         <p>Exhibition 10am ~ 6pm</p>
-                        <p>Opening 10. 31 6pm </p>
+                        <p>Opening 11. 01 6pm </p>
                       </div>
                     </div>
                   </motion.div>

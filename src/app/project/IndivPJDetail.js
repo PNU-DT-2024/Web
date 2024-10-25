@@ -45,14 +45,14 @@ function IndivPJDetail() {
                             <p className='titlePJ'>{data.posterTitle}</p>
                             <p className='description'>{data.posterDesc}</p>
                             <div className="row btnPoster">
-                                <p>{isPlaying ? '중단' : '포스터 재생'}</p><button onClick={togglePlayPause}><img src={isPlaying ? '/img/icon/stop.svg' : '/img/icon/play.svg'} alt=""/></button>
+                                <p>{isPlaying ? '중단' : '포스터 재생'}</p><button onClick={togglePlayPause}><img src={isPlaying ? '/asset/icon/stop.svg' : '/asset/icon/play.svg'} alt=""/></button>
 
                             </div>
                         </div>
                     </div>
                     <div className={isMobile ? 'm_motionPoster' : 'motionPoster'}>
-                        <video src="/img/posterImg/박정혜_poster.mp4" alt="#" ref={videoRef} preload="auto" style={{ display: isPlaying ? 'block' : 'none' }} loop/>
-                        <img src="/img/posterImg/박정혜_poster.png" style={{ display: isPlaying ? 'none' : 'block' }} alt=""/>
+                        <video src="/asset/poster/박정혜_poster.mp4" alt="#" ref={videoRef} preload="auto" style={{ display: isPlaying ? 'block' : 'none' }} loop/>
+                        <img src={`/asset/poster/${data.name}_poster.webp`} style={{ display: isPlaying ? 'none' : 'block' }} alt=""/>
                     </div>
                 </section>
 

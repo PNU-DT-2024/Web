@@ -8,6 +8,7 @@ import Footer from "../common/Footer";
 import indivData from "../../components/indiv.json";
 import ListLink, { setPrev, setNext } from "../common/ListLink";
 import styles from "../../css/IndivPFDtail.module.css";
+import { useEffect } from "react";
 
 function IndivPFDetail() {
     let dispatch = useDispatch();
@@ -18,7 +19,9 @@ function IndivPFDetail() {
     const data = indivData.list.find(item => item.name === id);
     const prev = setPrev(indivData, data);
     const next = setNext(indivData, data);
-
+    useEffect(() => {
+        console.log(`/asset/profile/${data.name}_profile.webp`)
+    })
     return (
         <div>
             <Menu page='profile' />
@@ -26,7 +29,7 @@ function IndivPFDetail() {
                 <section className={`box ${isMobile ? styles.m_profile : styles.profile} ${isMobile ? 'column ' : 'row'}`}>
                     <div className={styles.left}>
                         <div>
-                            <img src="/img/profileImg/박정혜_profile.png" alt="profile 사진" />
+                            <img src={`/asset/profile/${data.name}_profile.webp`} alt={data.name} />
                             <div className={styles.imgSign}>
                                 <img className={styles.signiture} src="#" alt="" />
                             </div>
@@ -48,7 +51,7 @@ function IndivPFDetail() {
                             <div className={`${styles.sns} ${isMobile ? 'column' : 'row'}`}>
                                 <div className={isMobile && 'row'}>
                                     <span>SNS</span>
-                                    <Link to={`https://www.instagram.com/${data.insta}`} target='_blank'>
+                                    <Link to={`https://www.instagram.com/${data.insta.slice(1)}`} target='_blank'>
                                         <span>{data.insta}</span>
                                     </Link>
                                 </div>
@@ -62,18 +65,22 @@ function IndivPFDetail() {
                         <div className={`${styles.bottom} ${isMobile ? 'column' : 'row'}`}>
                             <Link to={`/project/indiv/${data.name}`}>
                                 <div className={styles.indivPjImg}>
-                                    <img src="#" alt="#" />
+                                    <img src={`/asset/poster/cover/${data.name}_cover.webp`} alt='' />
                                 </div>
-                                <p>INDIVIDUAL PROJECT</p>
-                                <p>{data.mainTitle}</p>
+                                <div>
+                                    <p>INDIVIDUAL PROJECT</p>
+                                    <p>{data.mainTitle}</p>
+                                </div>
                             </Link>
 
-                            <Link to={`/project/team/${data.team}`}>
+                            <Link to={`/project/team/${data.team}`} className={styles.link}>
                                 <div className={styles.teamPjImg}>
-                                    <img src="#" alt="#" />
+                                    <img src="#" alt='' />
                                 </div>
-                                <p>TEAM PROJECT</p>
-                                <p>{data.teamTitle}</p>
+                                <div>
+                                    <p>TEAM PROJECT</p>
+                                    <p>{data.teamTitle}</p>
+                                </div>
                             </Link>
                         </div>
                     </div>

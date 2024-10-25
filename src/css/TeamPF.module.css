@@ -5,6 +5,7 @@
 .teamTitle {
     width: 70%;
     justify-content: space-between;
+    word-break: keep-all;
 }
 
 .teamTitle h1 {

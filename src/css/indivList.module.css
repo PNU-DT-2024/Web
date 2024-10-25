@@ -3,7 +3,7 @@
 }
 
 .selectWrap>article:first-child {
-  flex: 1;
+  flex: 1.5;
 }
 
 .selectWrap>article:last-child {
@@ -19,6 +19,7 @@
   justify-content: space-between;
   border-top: 1px solid black;
   cursor: pointer;
+  gap: 16px;
 }
 
 
@@ -30,12 +31,16 @@
   text-overflow: ellipsis;
 }
 .contentList a div p:first-child {
+  word-break: keep-all;
+  line-height: 110%;
   font-size: 1.25rem;
 }
 
 .contentList a div p:last-child {
   font-size: 0.875rem;
   color: #a7a7a7;
+  text-transform: uppercase;
+  text-align: right;
 }
 
 .contentList a div:hover p {
@@ -46,12 +51,12 @@
 .contentThumb {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   padding: 32px;
 }
 
 .contentThumb div {
-  width: 40%;
+  width: 55%;
 }
 
 .contentThumb div img {

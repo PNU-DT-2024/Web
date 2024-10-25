@@ -21,7 +21,7 @@ function TeamPF({ data }) {
                     {team.member.map((member) => (
                         <Link to={`/profile/indiv/${member}`}>
                             <div className={styles.imgMember}>
-                                <img src="/img/profileImg/박정혜_profile.png" alt="#" />
+                                <img src={`/asset/profile/${member}_profile.webp`} alt="#" />
                             </div>
                             <p>{member}</p>
 

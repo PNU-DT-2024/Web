@@ -11,7 +11,7 @@ input {
 }
 
 select {
-    background: url('/public/img/icon/ic_selectArrow.svg') no-repeat right;
+    background: url('/public/asset/icon/ic_selectArrow.svg') no-repeat right;
     background-position: calc(100% - 12px) center;
     cursor: pointer;
 }

@@ -24,7 +24,7 @@
   width: 120px;
   height: 50px;
   opacity: 0;
-  background: url('/public/img/icon/arrowR.svg') no-repeat center center;
+  background: url('/public/asset/icon/arrowR.svg') no-repeat center center;
   /*화살표 이미지 경로 */
   background-size: contain;
   /* transition: all 0.5s ease; */

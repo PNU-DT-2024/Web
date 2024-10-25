@@ -11,7 +11,7 @@ export default function ({isDday, isClose}) {
            
             <section className={`${styles.left} column`}>
                 <div>
-                    <img src="/img/icon/asura.png" alt="" />
+                    <img src="/asset/icon/asura.png" alt="" />
                 </div>
                 <p className="ko">버릇</p>
             </section>

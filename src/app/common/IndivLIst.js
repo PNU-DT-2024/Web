@@ -40,30 +40,25 @@ export default function IndivSelect({ type }) {
                     {isName != null ? (
                         type === 'project' ? (
                             <div>
-                                <img src="/img/posterImg/박정혜_poster.png" alt={isName} />
+                                <img src={`/asset/poster/cover/${isName}_cover.webp`} alt={isName} />
                             </div>
                         ) : (
-                            // <div>
-                            //     <img src="/img/profileImg/박정혜_profile.png" alt={isname} />
-                            // </div>
                             <div className={styles.imgAction}>
-                                <img src={isHovered ? '/img/profileImg/trigger.png' : ""} className={`${styles.imgTrigger} ${isHovered ? styles.show : ""}`}
+                                <img src={isHovered ? '/asset/profile/trigger.png' : ""} className={`${styles.imgTrigger} ${isHovered ? styles.show : ""}`}
                                 styles={{  right: (isHovered?'-40%':'-100%'), transition:'right 0.5s ease-in-out'}} alt="" />
-                                <img src={isHovered ? "/img/profileImg/hoverProfileImg.png" : "/img/profileImg/박정혜_profile.png"} loading="lazy" alt={isName} className={styles.imgBase} />
+                                <img src={isHovered ? `/asset/profile/SC/${isName}_profileSC.webp` : ""} loading="lazy" alt={isName} className={styles.imgBase} />
                             </div>
                         )
                     ) : (type === 'project' ? (
                         <div>
-                            <img src="/img/posterImg/posterImg.png" alt={isName} />
+                            <img src={`/asset/poster/poster.png`} alt={isName} />
                         </div>
                     ) : (
                         <div>
-                            <img src="/img/profileImg/hoverProfileImg.png" alt={isName} />
+                            <img src="/asset/profile/hoverProfileImg.png" alt={isName} />
                         </div>
                     )
                     )}
-
-                    {/* hover했을 때 스캐니메이션 애니메이션 */}
                 </article>
             }
         </section>

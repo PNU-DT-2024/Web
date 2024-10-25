@@ -8,14 +8,14 @@ export default function ListLink({ prevName, nextName, prevURL, nextURL, listURL
     return (
         <div className={`${styles.listLinkWrap} row`}>
             <Link to={prevURL} className={`${isMobile ? styles.m_listLink : styles.listLink} column`}>
-                {/* <img src="/img/icon/arrowL.svg" alt="이전" /> */}
+                {/* <img src="/asset/icon/arrowL.svg" alt="이전" /> */}
                 <p>{prevName}</p>
             </Link>
             <Link to={listURL} className={`${isMobile ? styles.m_listLink : styles.listLink} column`}>
                 <p>목록</p>
             </Link>
             <Link to={nextURL} className={`${isMobile ? styles.m_listLink : styles.listLink} column`}>
-                {/* <img src="/img/icon/arrowR.svg" alt="다음" /> */}
+                {/* <img src="/asset/icon/arrowR.svg" alt="다음" /> */}
                 <p>{nextName}</p>
             </Link>
 

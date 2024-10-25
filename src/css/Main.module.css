@@ -1,7 +1,8 @@
-.closeMain{
+.closeMain {
   position: relative;
 }
-.btnRemove{
+
+.btnRemove {
   position: absolute;
   right: 0;
   top: 0;
@@ -11,6 +12,7 @@
   background-color: transparent;
   cursor: default;
 }
+
 .section {
   display: flex;
   margin-bottom: 128px;
@@ -88,18 +90,21 @@
 .detail>div {
   padding: 12px 12px;
   border-top: 1px solid black;
-  
+
 }
 
 .detail>div:first-child {
   margin-bottom: 24px;
 }
-.detail>div div{
+
+.detail>div div {
   gap: 8px;
 }
+
 .detail>div div p:first-child {
   flex: 1;
 }
+
 .detail>div div p:last-child {
   flex: 2;
 }
@@ -133,6 +138,9 @@
   padding: 12px;
   border-top: 1px solid black;
   justify-content: space-between;
+  gap: 12px;
+  word-break: keep-all;
+
 }
 
 .memberDT .right div:last-child {
@@ -141,8 +149,11 @@
 
 .memberDT .right p:first-child {
   font-weight: 500;
-}
 
+}
+.memberDT .right p:last-child {
+  line-height: 110%;
+}
 .map .left {
   display: flex;
   justify-content: center;
@@ -150,12 +161,15 @@
 
 .map .right {
   text-align: right;
+  word-break: keep-all;
+  
 }
 
 .map .right>p {
   font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: 12px;
+  line-height: 120%;
 }
 
 .map .right div p:not(:last-child) {
