@@ -15,12 +15,12 @@ export default function IndivSelect({ type }) {
     const handleMouseEnter = (name) => {
         setIsHovered(true);
         setname(name);
-        console.log('들어감', isHovered, name);
+        // console.log('들어감', isHovered, name);
     };
     const handleMouseLeave = () => {
         setIsHovered(false);
         setname(null);
-        console.log('나감', isHovered);
+        // console.log('나감', isHovered);
     };
     return (
         <section className={`row ${styles.selectWrap}`}>
@@ -45,8 +45,8 @@ export default function IndivSelect({ type }) {
                         ) : (
                             <div className={styles.imgAction}>
                                 <img src={isHovered ? '/asset/profile/trigger.png' : ""} className={`${styles.imgTrigger} ${isHovered ? styles.show : ""}`}
-                                styles={{  right: (isHovered?'-40%':'-100%'), transition:'right 0.5s ease-in-out'}} alt="" />
-                                <img src={isHovered ? `/asset/profile/SC/${isName}_profileSC.webp` : ""} loading="lazy" alt={isName} className={styles.imgBase} />
+                                    styles={{ right: (isHovered ? '-40%' : '-100%'), transition: 'right 0.5s ease-in-out' }} alt="" />
+                                <img src={isHovered ? `/asset/profile/SC/${isName}_profileSC.webp` : ""} loading="lazy" alt={isName} className={styles.imgHover} />
                             </div>
                         )
                     ) : (type === 'project' ? (
@@ -55,7 +55,7 @@ export default function IndivSelect({ type }) {
                         </div>
                     ) : (
                         <div>
-                            <img src="/asset/profile/hoverProfileImg.png" alt={isName} />
+                            <img src="/asset/profile/SC/profileBase.webp" className={styles.imgBase} alt={isName} />
                         </div>
                     )
                     )}

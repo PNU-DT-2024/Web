@@ -1,22 +1,184 @@
-.pjContainer .box:not(:first-child, :last-child) {
-    margin: 128px 0;
-}
-
 .profileImg img,
 .imgInter img,
 .imgStep img {
     width: 100%;
 }
 
-
-
 .profileImg,
 .motionPoster,
 .imgInter,
 .imgStep {
-    background-color: #f8f8f8;
-    /* height: 500px; */
+    background-color: #ececec;
 }
+
+.pjContainer .box:not(:last-child),
+.m_pjContainer .box:not(:last-child) {
+    border-top: 1px solid black;
+    padding-top: 32px;
+    margin-top: 128px;
+    margin-bottom: 32px;
+}
+
+.pjContainer section {
+    padding: 0 16px;
+}
+
+.mainConcept {
+    gap: 64px;
+}
+
+
+
+.subject h2 {
+    font-size: 2.5rem;
+    word-break: keep-all;
+    font-weight: 500;
+    line-height: 130%;
+}
+
+.article {
+    gap: 64px;
+
+}
+
+.article>div {
+    /* align-items: flex-start; */
+}
+
+.article .exp {
+    gap: 32px;
+    margin-bottom: 32px;
+}
+
+.article .exp>div:first-child {
+    flex: 1.5;
+}
+
+.article .exp>div:last-child {
+    flex: 1;
+}
+
+.article .expTxt {
+    display: inline-block;
+    padding-left: 24px;
+    border-left: 6px solid;
+    border-image: linear-gradient(to bottom, var(--mainColor), var(--subColor)) 1;
+}
+
+.article .expTxt .titlePj {
+    font-size: 2rem;
+    font-weight: 500;
+    word-break: keep-all;
+    margin-bottom: 16px;
+}
+
+.author {
+    padding-right: 16px;
+    text-align: right;
+    border-right: 1px solid black;
+    justify-content: flex-end;
+}
+
+.author p,
+.author span {
+    /* color: white; */
+}
+
+.author p:first-child {
+    margin-bottom: 12px;
+}
+
+.author span:not(:last-child) {
+    margin-right: 8px;
+}
+
+
+.poster .exp {
+    justify-content: space-between;
+    width: 100%;
+}
+
+.poster .exp>div:first-child {
+    height: 100%;
+    justify-content: space-between;
+}
+
+.poster .imgposter {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+}
+
+.motionPoster {
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+}
+
+.motionPoster video,
+.motionPoster img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.btnPoster {
+    align-items: flex-end;
+    margin-left: auto;
+}
+
+.exp button {
+    font-size: 1.125rem;
+    border: 1px solid black;
+    background-color: transparent;
+    padding: 12px 24px;
+}
+
+
+.inter .exp>div {
+    flex: 1;
+}
+
+.interStep,
+.m_interStep {
+    gap: 12px;
+    margin-bottom: 64px;
+}
+
+
+.step {
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.step p {
+    line-height: 150%;
+    margin-top: 12px;
+}
+
+.stepNum {
+    font-size: 0.875rem;
+}
+
+.interVideo {
+    width: 100%;
+    height: 512px;
+    background-color: aqua;
+
+}
+
+/* .pjContainer .box:not(:first-child, :last-child) {
+    margin: 128px 0;
+}
+
+
+
+
+
+
 
 .mainConcept {
     display: flex;
@@ -152,60 +314,71 @@
 }
 
 
-.inter {
-    margin-bottom: 32px;
-}
+
 
 .inter .format {
     color: #a7a7a7;
     margin-top: 12px;
 }
 
-.inter .imgInter {
-    margin-left: 72px;
-    flex: 2;
-}
-
-.interStep,
-.m_interStep {
-    gap: 12px;
-    margin-bottom: 64px;
-}
 
 
-.step {
-    gap: 12px;
-    margin-top: auto;
-
-    /* margin-top: 12px; */
-}
-
-.step p {
-    line-height: 150%;
-    margin-top: 12px;
-}
-
-.stepNum {
-    font-size: 0.875rem;
-}
-
-.interVideo {
-    width: 100%;
-    height: 512px;
-    background-color: aqua;
-
-}
+ */
 
 
 
 /* 모바일 css------------------------------------------------- */
-.m_pjContainer .box:not(:first-child, :last-child) {
-    margin-top: 72px;
+
+.m_pjContainer section {
+    padding: 0 12px;
 }
+
+.m_pjContainer .box:not(:last-child) {
+    padding-top: 12px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.m_pjContainer .article {
+    gap: 24px;
+}
+
+.m_pjContainer .article .subject h2 {
+    font-size: 2rem;
+}
+
+.m_pjContainer .article .exp {
+    gap: 16px;
+}
+
+.m_pjContainer .article .expTxt {
+    padding-left: 16px;
+}
+
+.m_pjContainer .article .expTxt .titlePj {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
 .m_pjContainer .box:last-child {
     margin-top: 84px;
 }
-.m_concept {
+
+.m_pjContainer .mainConcept {
+    gap: 28px;
+    font-size: 0.75rem;
+}
+
+.m_pjContainer .mainConcept p {
+    margin-bottom: 8px;
+}
+
+.m_btnPoster button {
+    /* display: flex; */
+    width: 100%;
+}
+
+/* .m_concept {
     border-left: 1px solid white;
     padding: 0 24px;
 }
@@ -268,4 +441,4 @@
 .m_step p {
     font-size: 0.75rem;
     margin-top: 8px;
-}
+} */

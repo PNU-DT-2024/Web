@@ -10,102 +10,86 @@
     justify-content: center;
 }
 
-.interBanner,
-.m_interBanner {
-    /* background-color: aquamarine; */
-}
-
-.interBanner>div {
-    width: 100%;
-}
-
-.interBanner .imgMain {
-    display: flex;
-    align-items: center;
-    /* justify-content: center; */
-    justify-content: space-around;
-    margin-top: 92px;
-    height: 100%;
-}
-
-.imgMain img {
-    height: 90%;
-}
-
-.imgMain span{
+.interBanner {
     position: relative;
-    z-index: 999;
+    height: calc(100vh - 40px);
 }
-.imgMain span::before{
-    position: absolute;
-    left: 0;
-    top: 0;
-    content: '';
-    width: 50px;
-    height: 50px;
-    border-top: 5px solid #000;
-    border-right: 5px solid #000;
-}
-.imgMain span:first-child::before{
-    transform: rotate(225deg);
-    transform-origin: center;
-    
-}
-.imgMain span:last-child::before{
-    transform: rotate(45deg);
-    transform-origin: center;
-    
-}
-.banner span {
-    font-size: 7rem;
 
+.interBanner>div:first-child {
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    /* background-color: red; */
 }
-.banner{
-    justify-content: space-between;
-}
-.banner >img{
-    height: calc(100vh - 100px);
-}
-.mainTxtWrap{
+
+.btnPrev {
+    flex: 1;
     justify-content: center;
     align-items: center;
     text-align: center;
+    z-index: 999;
+    cursor: pointer;
 }
-.mainTxtWrap div{
-    margin-bottom: 32px;
+
+
+.interBanner>div img {
+    /* height: 100%; */
 }
-.mainTxtWrap p{
-    font-size: 0.75rem;
-    line-height: 150%;
-    /* width: 80%; */
+
+.interaction {
+    position: relative;
+
+    height: 100%;
+
 }
-.mask {
+
+.imgMain {
+    height: 100%;
+}
+
+.interaction .mask {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
     position: absolute;
-    height: 85vh;
+    left: 0;
+    top: 0;
     cursor: none;
 }
 
 
-.imgMask {
+.imgMain img {
     height: 100%;
 }
 
-.interBtn {
-    padding: 0;
-    margin: 0 24px;
+.mask img {
+    height: 91%;
+    margin-bottom: 48px;
+}
+
+.interBanner .notice {
+    position: absolute;
+    display: flex;
     align-items: center;
+    gap: 24px;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    z-index: 999;
+}
+
+.notice p {}
+
+.interBtnOff {
     background-color: transparent;
     border: none;
 }
 
-.interBtnOff {
-    position: absolute;
-    right: 50%;
-    bottom: 5%;
-    transform: translateX(50%);
-    z-index: 999;
-    background-color: transparent;
-    border: none;
+.interBtn:hover,
+.interBtnOff:hover {
+    filter: brightness(0.8);
 }
 
 /* 모바일 css----------------------------------- */
@@ -116,4 +100,43 @@
 .m_banner .interBtn,
 .m_interBanner .interBtn {
     width: 48px;
+}
+
+
+/* 일반 배너 */
+.mainTxtWrap {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.mainTxtWrap div {
+    margin-bottom: 32px;
+}
+
+.mainTxtWrap p {
+    font-size: 0.75rem;
+    line-height: 150%;
+    /* width: 80%; */
+}
+
+.banner span {
+    font-size: 7rem;
+
+}
+
+.banner {
+    justify-content: space-between;
+}
+
+.banner>img {
+    height: calc(100vh - 100px);
+}
+
+.interBtn {
+    padding: 0;
+    margin: 0 24px;
+    align-items: center;
+    background-color: transparent;
+    border: none;
 }

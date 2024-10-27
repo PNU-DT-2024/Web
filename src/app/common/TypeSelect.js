@@ -17,7 +17,7 @@ export default function TypeSelect({ type }) {
 
     useEffect(() => {
         // lastVisit 값을 사용하여 필요한 작업을 수행
-        console.log(lastVisit); // 예시로 lastVisit 값을 콘솔에 출력
+        // console.log(lastVisit); // 예시로 lastVisit 값을 콘솔에 출력
     }, [lastVisit]); // lastVisit이 변경될 때마다 useEffect 실행
     return (
         <div>

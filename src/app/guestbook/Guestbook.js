@@ -13,7 +13,7 @@ function Guestbook() {
   const [comment, setComment] = useState("");
   const [to, setTo] = useState("");
   const [filter, setFilter] = useState(""); // 필터 상태 추가
-  const [click, setClick] = useState(false);
+  // const [click, setClick] = useState(false);
 
   const names = [
     "모두에게",

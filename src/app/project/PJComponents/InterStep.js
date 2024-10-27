@@ -7,13 +7,13 @@ export default function InterStep({ imgUrl, step }) {
         query: "(max-width:767px)"
     });
     return (
-        <div className={isMobile?'row':''}>
+        <div className='column' >
 
             <div className='imgStep'>
                 <img src={imgUrl} alt="#" />
             </div>
             <p className='stepNum'>{step}</p>
 
-        </div>
+        </ div>
     )
 }

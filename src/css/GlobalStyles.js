@@ -96,12 +96,13 @@ nav, main, footer{
 
 }
 .box{
-  padding: 0 var(--padding) ;
+  margin: 0 var(--padding) ;
   
 }
 .description{
 	line-height:170%;
 	font-size:1rem;
+	word-break : keep-all;
 }
 
 .row{

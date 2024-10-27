@@ -1,7 +1,7 @@
 import { useMediaQuery } from "react-responsive";
 
 import styles from "../../css/Ready.module.css"
-export default function ({isDday, isClose}) {
+export default function ({isDday}) {
     const isMobile = useMediaQuery({
         query: "(max-width : 767px)"
     });

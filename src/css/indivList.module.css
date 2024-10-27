@@ -15,7 +15,7 @@
 }
 
 .contentList div {
-  padding: 12px 24px;
+  padding: 16px 24px;
   justify-content: space-between;
   border-top: 1px solid black;
   cursor: pointer;
@@ -26,10 +26,12 @@
 .lastList {
   border-bottom: 1px solid black;
 }
-.contentList a div{
+
+.contentList a div {
   align-items: center;
   text-overflow: ellipsis;
 }
+
 .contentList a div p:first-child {
   word-break: keep-all;
   line-height: 110%;
@@ -63,7 +65,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  
+
 }
 
 
@@ -78,10 +80,17 @@
   width: 100%;
   object-fit: cover;
 } */
-
-.imgBase {
+.imgBase{
+  height: 100%;
+}
+.imgHover {
   position: relative;
   z-index: 3;
+
+}
+
+.imgHover {
+  height: 90%;
 }
 
 .imgTrigger {
@@ -90,6 +99,7 @@
   transition: right 0.5s ease-in-out;
   z-index: 2;
   visibility: hidden;
+  height: 50%;
 }
 
 .show {

@@ -42,7 +42,7 @@ export default function Main() {
     const currentTime = new Date();
     const timeDifference = openingDate - currentTime;
 
-    const days = 32-currentTime.getDate();
+    const days = 32 - currentTime.getDate();
     const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
@@ -59,7 +59,7 @@ export default function Main() {
       }
       // setDate(currentTime);
       setDday(calculateTimeDifference());
-      console.log(`버튼 클릭 : ${!isClick}, 디데이 : ${isOpen}`);
+      // console.log(`버튼 클릭 : ${!isClick}, 디데이 : ${isOpen}`);
     };
     const interval = setInterval(calculateIsOpen, 500);
     if (isClick === false) {
@@ -116,7 +116,6 @@ export default function Main() {
               <div className={`${styles.content} ${isMobile ? styles.m_twocolumn : styles.twoRow} ${styles.mainPoster}`}>
                 <motion.div {...bottomMotion}>
                   <div className={styles.left}>
-                    {/* <img src="/asset/mainPoster.png" alt="메인 포스터<버릇>" /> */}
                     <video src="/asset/poster/main_poster.mp4" autoPlay muted loop></video>
 
                   </div>
@@ -182,23 +181,23 @@ export default function Main() {
 
                 <motion.div {...bottomMotion}>
                   <div className={`${styles.right} column`}>
-                    <div className={isMobile?'column':'row'}>
+                    <div className={isMobile ? 'column' : 'row'}>
                       <p>위원장</p>
                       <p>이상화</p>
                     </div>
-                    <div className={isMobile?'column':'row'}>
+                    <div className={isMobile ? 'column' : 'row'}>
                       <p>부위윈장</p>
                       <p>이지은</p>
                     </div>
-                    <div className={isMobile?'column':'row'}>
+                    <div className={isMobile ? 'column' : 'row'}>
                       <p>BRANDING</p>
                       <p>이상화 · 이지은 · 박서해 · 왕신웨 </p>
                     </div>
-                    <div className={isMobile?'column':'row'}>
+                    <div className={isMobile ? 'column' : 'row'}>
                       <p>WEB</p>
                       <p>김경린 · 긴은선 · 박정혜 · 최시아</p>
                     </div>
-                    <div className={isMobile?'column':'row'}>
+                    <div className={isMobile ? 'column' : 'row'}>
                       <p>DP</p>
                       <p>조성원 · 김동성 · 박승찬 · 오여슬 · 이민서</p>
                     </div>
