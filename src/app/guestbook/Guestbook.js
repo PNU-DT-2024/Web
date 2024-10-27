@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
-import Masonry from 'react-masonry-css';
+import Masonry from "react-masonry-css";
 import Menu from "../common/Menu";
 import Footer from "../common/Footer";
 import guestBookService from "../../api/guestBookService";
 import Title from "../common/Title";
-import styles from "../../css/Guestbook.module.css"
+import styles from "../../css/Guestbook.module.css";
 
 function Guestbook() {
   const [guestBookEntries, setGuestBookEntries] = useState([]);
@@ -13,7 +13,6 @@ function Guestbook() {
   const [comment, setComment] = useState("");
   const [to, setTo] = useState("");
   const [filter, setFilter] = useState(""); // 필터 상태 추가
-  // const [click, setClick] = useState(false);
 
   const names = [
     "모두에게",
@@ -39,11 +38,9 @@ function Guestbook() {
   const loadGuestBookEntries = async () => {
     try {
       let fetchedEntries = await guestBookService.getGuestBook();
-      // fetchedEntries가 배열이 아니라 객체인 경우도 Object.values를 사용하여 배열로 변환
       fetchedEntries = Array.isArray(fetchedEntries)
         ? fetchedEntries
         : Object.values(fetchedEntries);
-      // 시간순 정렬: 최신 항목이 먼저 오도록 정렬
       const sortedEntries = fetchedEntries.sort(
         (a, b) => new Date(b.createdTime) - new Date(a.createdTime)
       );
@@ -69,11 +66,18 @@ function Guestbook() {
       console.error("Error posting to guestbook:", error);
     }
   };
+
+  // 필터 변경 함수 추가
+  const handleFilterChange = (value) => {
+    setFilter(value === "모두에게" ? "" : value); // "모두에게"일 경우 필터 해제
+  };
+
   const breakpointColumnsObj = {
     default: 3,
     1100: 2,
-    700: 1
+    700: 1,
   };
+
   const renderGuestBookEntries = () => {
     return (
       <Masonry
@@ -86,7 +90,6 @@ function Guestbook() {
             <span>To. {entry.to}</span>
             <p className="description">{entry.comment}</p>
             <p>From. {entry.from}</p>
-            {/* <p>Created Time: {entry.createdTime}</p> */}
           </div>
         ))}
       </Masonry>
@@ -94,12 +97,12 @@ function Guestbook() {
   };
 
   const isMobile = useMediaQuery({
-    query: "(max-width:767px)"
+    query: "(max-width:767px)",
   });
 
   return (
     <div>
-      <Menu page='GUESTBOOK' />
+      <Menu page="GUESTBOOK" />
       <main className={`contentsContainer ${isMobile && styles.m_guestBook}`}>
         {isMobile || <Title title="GUESTBOOK" />}
         <div className={styles.txtDeco}>
@@ -108,7 +111,7 @@ function Guestbook() {
           <p>남겨주세요</p>
         </div>
         <section className={styles.sent}>
-          <div className={`${styles.write} ${isMobile ? 'column' : 'row'}`}>
+          <div className={`${styles.write} ${isMobile ? "column" : "row"}`}>
             <div className={`${styles.left} column`}>
               <div className="row">
                 <label>To.</label>
@@ -131,11 +134,12 @@ function Guestbook() {
               </div>
             </div>
             <div className={styles.right}>
-              <textarea className={styles.textarea} rows="10"
+              <textarea
+                className={styles.textarea}
+                rows="10"
                 value={comment}
-                onChange={(e) => setComment(e.target.value)
-                }
-                placeholder="길동아 수고했어!!"
+                onChange={(e) => setComment(e.target.value)}
+                placeholder="토코몬아 수고했어!!!"
               />
             </div>
           </div>
@@ -143,19 +147,32 @@ function Guestbook() {
             <button onClick={handlePostGuestBook}>보내기</button>
           </div>
         </section>
-        <section className={`${styles.message} ${isMobile ? 'column' : 'row'}`}>
-          {isMobile ? <select className={styles.m_optionList} value={filter} onChange={(e) => setFilter(e.target.value)}>
-            {names.map((name) => (
-              <option key={name} value={name}>
-                {name}
-              </option>
-            ))}
-          </select> : <div className={styles.optionList} onChange={(e) => setFilter(e.target.value)}>
-            {names.map((name) => (
-              <option key={name} value={name} onClick={(e) => setFilter(name)}>
-                {name}
-              </option>
-            ))}</div>}
+        <section className={`${styles.message} ${isMobile ? "column" : "row"}`}>
+          {isMobile ? (
+            <select
+              className={styles.m_optionList}
+              value={filter}
+              onChange={(e) => handleFilterChange(e.target.value)} // onChange 핸들러 수정
+            >
+              {names.map((name) => (
+                <option key={name} value={name}>
+                  {name}
+                </option>
+              ))}
+            </select>
+          ) : (
+            <div className={styles.optionList}>
+              {names.map((name) => (
+                <option
+                  key={name}
+                  value={name}
+                  onClick={() => handleFilterChange(name)} // onClick 핸들러 수정
+                >
+                  {name}
+                </option>
+              ))}
+            </div>
+          )}
           <div>{renderGuestBookEntries()}</div>
         </section>
       </main>
