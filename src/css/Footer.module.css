@@ -1,7 +1,8 @@
 .footer {
-    background-color: var(--black);
-    color: white;
+    background-color: var(--bg);
+    color: var(--black);
     padding: 20px var(--padding);
+    border-top: 1px solid var(--black);
 }
 
 .footerWrap,
@@ -16,6 +17,7 @@
 
 .exhibition {
     margin-bottom: 48px;
+    word-break: keep-all;
 }
 
 
@@ -28,6 +30,7 @@
     font-size: 0.75rem;
     gap: 4px;
     color: #a7a7a7;
+    word-break: keep-all;
 }
 
 .copyright p:first-child {

@@ -1,7 +1,7 @@
 {
     "list": [
         {
-            "index" : 0,
+            "index": 0,
             "name": "WEB",
             "member": [
                 "김경린",
@@ -9,23 +9,23 @@
                 "박정혜",
                 "최시아"
             ],
-            "role" : "내 모습이 보이지 않아 앞길도 보이지 않아나는 아주 작은 애벌레살이 터져 허물 벗어 한 번 두 번 다시나는 상처 많은 번데기추운 겨울이 다가와 힘겨울지도 몰라봄바람이 불어오면 이제 나의 꿈을 찾아 날아날개를 활짝 펴고 세상을 자유롭게 날거야노래하며 춤추는 나는 아름다운 나비",
-            "mainTitle" : "관계",
-            "mainDesc" : "팀Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "videoTitle" : "관계, 흐름",
-            "videoDesc" : "팀Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "interTitle" : "관계, 캔버스",
-            "interDesc" : "팀Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "interFormat": "p5.js, mediapipe",
+            "role": "웹 팀은 전시회 작업물을 아카이빙하고 졸업논문을 대신하는 웹 사이트를 제작합니다. 또한, 인스타그램 등 SNS 채널을 관리하며 전시회의 디지털 기록과 홍보를 담당합니다. 이러한 활동을 통해 전시물의 접근성을 높이고, 관객과 소통합니다.",
+            "mainTitle": "관계",
+            "mainDesc": "우리는 다양한 존재와 관계를 맺고 살아간다. 그 중, 특정 관계에서 더 자주 긴밀하게 교류가 일어난다. 관계 내에서 반복되고 견고해져 굳어지는 모든 것들은 곧 그 관계 자체가 버릇이 되게 한다. 또한 각기 다른 존재들과 만남과 교류, 이별이라는 과정을 반복하는 관계 형성 흐름은 큰 버릇으로 볼 수 있다. 즉, 관계 그 자체, 그리고 관계 형성의 과정은 버릇으로 볼 수 있다.",
+            "videoTitle": "관계, 흐름",
+            "videoDesc": "아빠와 나, 수업을 같이 들은 동기,사랑하는 애인, 얼마 전 무지개다리를 건넌 초코 ,눈치 주던 예민한 상사 , 우리는 다양한 이들과 만남과 헤어짐을 반복하며 살아간다. 누군가와 관계를 맺고, 교류를 하다, 이별을 하는 이 일련의 과정의 큰 흐름을 버릇으로 볼 수 있다. 유일하다 생각했던 관계도 일생의 전체 관계 중 일부였을 뿐, 새로운 관계는 버릇처럼 다시 찾아온다.",
+            "interTitle": "관계, 캔버스",
+            "interDesc": "특정인과 관계를 맺으며 교류하게 되는 모든 것들은 반복되고 쌓여 굳어지는 하나의 버릇으로 볼 수 있다. 교류의 대명사인 악수를 통해 상대와 나 사이에 다양한 색상의 원을 쌓아본다. 어떤 상대와 어떤 교류를 했는지에 따라 각기 다르게 그려진 캔버스를 살펴보자.",
+            "interFormat": "p5.js, Mediapipe, Cloudinary API",
             "interStep": [
-                "1. 오마주 카드를 이미지로 다운로드받거나 인쇄해 소장할 수 있다.",
-                "2. 생성된 자신의 모델을 확인한 후, 블루투스 리모콘으로 원하는 순간을 촬영한다.",
-                "3. 부채질이 반복되어 불이 커짐을 확인, 불이 커져도 부채질을 계속한다면 다 타버리고 재만 남아버린 화면을 확인한다"
+                "1. 편한 차렷자세로 바닥에 부착되어 있는 발바닥 위치에 맞게 선다.",
+                "2. 범위 안에 손을 천천히 넣어 상대의 손을 잡고 악수한다.",
+                "3. 원하는 타이밍에 손을 놓고 악수를 마무리 한 후, 화면에 뜬 QR코드를 스캔하여 우리의 관계 포토카드를 저장해 간직한다."
+                
             ]
-             
         },
         {
-            "index" : 1,
+            "index": 1,
             "name": "BRANDING",
             "member": [
                 "이상화",
@@ -33,23 +33,22 @@
                 "이지은",
                 "왕신웨"
             ],
-            "role" : "내 모습이 보이지 않아 앞길도 보이지 않아나는 아주 작은 애벌레살이 터져 허물 벗어 한 번 두 번 다시나는 상처 많은 번데기추운 겨울이 다가와 힘겨울지도 몰라봄바람이 불어오면 이제 나의 꿈을 찾아 날아날개를 활짝 펴고 세상을 자유롭게 날거야노래하며 춤추는 나는 아름다운 나비",
-            "mainTitle" : "오르골",
-            "mainDesc" : "팀Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco ",
-            "videoTitle" : "행동 작곡 기억 연주",
-            "videoDesc" : "팀Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "interTitle" : "태엽 교향곡",
-            "interDesc" : "팀Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "interFormat": "processing",
+            "role": "브랜딩팀은 전시 그래픽을 제안하고 이를 통한 다양한 인쇄물을 제작합니다. 또한 다양한 매체에서 전시 그래픽으로부터 파생된 아이덴티티를 유지할 수 있도록 다른 팀과 꾸준히 소통하여 관객들이 전시를 관람하는 동안 일괄적인 시각 경험을 할 수 있도록 합니다.",
+            "mainTitle": "오르골",
+            "mainDesc": "반복된 개별의 음들이 모여 하나의 음악을 만들어 내는 과정은 과거로부터 반복된 행동들이 오늘날의 버릇이 되어 나를 나타내는 것과 같다. 악보만으로는 그것에 새겨진 음악을 인지할 수 없으며 오르골을 통해서 음악을 온전히 들을 수 있는 것처럼, 우리는 우리의 버릇을 이해하는 과정을 오르골 연주에 빗대어 본다.",
+            "videoTitle": "행동 작곡 기억 연주",
+            "videoDesc": "우리에게는 자신만의 오르골이 있다. 나의 반복된 행동 하나 하나가 음을 만들어 하나의 선율을 만들어내는 이 오르골은 과거와 현재의 나의 행동을 표현한다. 시계는 오르골 안에서 시간이 흐르고 있음을 나타내는 동시에, 하나의 반복된 행동에 대한 시간과 배경을 표현하며, 오르골 속 하나의 음을 의미한다. 과거의 행동은 시계로 존재하지만 작동하지 않으며 현재의 행동만이 소리를 내고 존재감을 드러낸다. 모든 음을 연주하지 못하는 오르골은  완벽하지 않아도 아름다운 우리를 표현한다.",
+            "interTitle": "태엽 교향곡",
+            "interDesc": "태엽 교향곡은 버릇으로부터 추억을 끄집어내고 이를 우리만의 소리로 풀어낸 인터랙티브 아트이다. 관람객은 총 4개의 악장으로 구성된 자신만의 교향곡 악보를 제작하고, 그것을 연주하는 연주자가 됨으로써 이전의 관계들을 새로운 감각으로 구성한다. 과거로의 태엽을 돌려 생각지도 못하게 마주하는 이 소리들은 어쩌면 하나의 거대한 오르골일 지도 모른다.",
+            "interFormat": "Pure Data",
             "interStep": [
-                "1. 안녕하세요",
-                "2. 반갑습니다",
-                "3. hi, hello"
+                "1. 종이악보를 작성한다. ",
+                "2. 종이악보 설명서를 참고하여 건반을 연주한다. ",
+                "3. 연주에 따라 변화하는 그래픽과 음악을 감상한다."
             ]
-             
         },
         {
-            "index" : 2,
+            "index": 2,
             "name": "DP",
             "member": [
                 "조성원",
@@ -58,20 +57,19 @@
                 "오여슬",
                 "이민서"
             ],
-            "role" : "내 모습이 보이지 않아 앞길도 보이지 않아나는 아주 작은 애벌레살이 터져 허물 벗어 한 번 두 번 다시나는 상처 많은 번데기추운 겨울이 다가와 힘겨울지도 몰라봄바람이 불어오면 이제 나의 꿈을 찾아 날아날개를 활짝 펴고 세상을 자유롭게 날거야노래하며 춤추는 나는 아름다운 나비",
-            "mainTitle" : "Trace",
-            "mainDesc" : "팀Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "videoTitle" : "Biography",
-            "videoDesc" : "팀Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "interTitle" : "Record",
-            "interDesc" : "팀Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "interFormat": "processing",
+            "role": "DP팀은 전시장의 공간 연출과 전시회 오프닝 영상을 제작합니다. 작품과 주제가 효과적으로 전달되도록 전시를 기획하며, 영상으로 관객에게 첫 인상을 남깁니다. 전시의 흐름과 분위기를 조성하여 관객의 몰입을 돕는 역할을 합니다.",
+            "mainTitle": "Trace",
+            "mainDesc": "우리가 살아가는 동안 남기는 흔적들은 우리의 정체성을 반영합니다. 우리는 각자의 삶 속에서 흔적을 남기며 살아갑니다. 이처럼 우리 일상 속 버릇이 남기는 흔적을 발견하고, 과거를 반추하게 합니다. 버릇처럼 남겨진 행동들이 어떻게 우리의 삶을 구성하고, 그것들이 우리 자신을 어떻게 드러내는지를 탐구합니다.",
+            "videoTitle": "Biography",
+            "videoDesc": " 'Biography'는 한 노인의 일대기를 다룹니다. 그는 젊은 시절 우주비행사였고, 우주에서의 생활이 그의 삶에 깊이 새겨져 있습니다. 지구로 돌아와서도 우주의 습관이 남아있어, 컵을 공중에 떠다니게 놓으려다 깨트리는 장면은 그가 남긴 습관의 흔적을 상징합니다. 과거와 현재, 공간과 시간 속에서 쌓여온 '버릇'은 그 사람의 이야기를 담아내며, 우리 모두가 남기고 있는 흔적을 되돌아보게 합니다.",
+            "interTitle": "Record",
+            "interDesc": " 'Record' 는 사진을 찍을 때 무의식적으로 취하는 포즈에 주목한 인터랙션 작품입니다. 사람들이 사진을 찍는 순간, 자연스럽게 나오는 습관적인 포즈는 그 사람의 독특한 흔적이 됩니다. 이 인터랙션에서는 참여자가 다양한 포즈를 취하며, 본인도 인식하지 못했던 자신만의 포즈를 시각화합니다.",
+            "interFormat": "Javascript",
             "interStep": [
-                "1. 안녕하세요",
-                "2. 반갑습니다",
-                "3. hi, hello"
+                "1. 촬영 버튼을 누르고 3초 기다린다.",
+                "2. 4장의 사진을 선택한다.",
+                "3. 저장된 사진을 확인한다."
             ]
-             
         }
     ]
 }

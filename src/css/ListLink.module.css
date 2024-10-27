@@ -2,11 +2,16 @@
     align-items: center;
     width: 100%;
     justify-content: space-around;
-    margin: 32px 0 64px 0;
+    margin: 32px 0;
+    padding: 12px 0;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 }
 
-.listLink, .m_listLink {
-    text-align: center;
+.listLink,
+.m_listLink {
+    flex: 1;
+    align-items: center;
 }
 
 .listLink img {
@@ -14,21 +19,32 @@
 }
 
 .listLink p {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.listLinkWrap p:first-child {
-    font-size: 2rem;
+.listLinkWrap .listLink:not(:nth-child(2)) p {
+    font-size: 1rem;
 }
+
 /* 모바일 css------------------------------------ */
-.m_listLink img{
+.m_listLink img {
     width: 80px;
     margin-bottom: 12px;
 }
-.m_listLink p:first-child{
-    font-size: 1.5rem;
+
+.m_listLink:nth-child(2) p {
+    font-size: 1rem;
 }
-.listLinkWrap p{
+
+.listLinkWrap .m_listLink p {
+    font-size: 1rem;
     font-weight: 500;
+    max-width: 80px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

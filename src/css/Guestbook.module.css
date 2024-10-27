@@ -1,157 +1,175 @@
-input,
 select,
-textarea {
-    border: 1px solid #000000;
-    /* border-radius: 0; */
+input {
+    -o-appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    width: 100%;
+    border: none;
+    outline: none;
 }
 
 select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
+    background: url('/public/asset/icon/ic_selectArrow.svg') no-repeat right;
+    background-position: calc(100% - 12px) center;
+    cursor: pointer;
+}
+
+select::-ms-expand,
+input::-ms-expand {
+    display: none;
 }
 
 option {
     box-shadow: none;
 }
 
-.messageWrap {
-    margin-bottom: 92px;
-    gap: 32px;
-}
-
-.sent {
-    flex: 1;
-}
-
-.write {
-    flex: 2;
-}
-
-.sent .personalInfo {
-    justify-content: center;
-    align-items: left;
-
-}
-
-.personalInfo:first-child {
-    margin-bottom: 24px;
-}
-
-.personalInfo label {
-    font-size: 1.75rem;
-    font-weight: 500;
-    margin-bottom: 12px;
-}
-
-.personalInfo input,
-.personalInfo select {
-    font-size: 1.25rem;
-    padding: 8px 12px;
-}
-
-
-
 .textarea {
     width: 100%;
     font-size: 1.25rem;
-    /* padding: 10px; */
-    padding-block: 0;
-    padding-inline: 0;
     resize: none;
+    border: none;
+    outline: none;
+    background-color: transparent;
 }
 
 
-.btnSent {
+.txtDeco {
+    font-size: 2rem;
+    font-weight: 500;
+    padding-left: 24px;
+    margin-bottom: 64px;
+    border-left: 6px solid;
+    border-image: linear-gradient(to bottom, var(--mainColor), var(--subColor)) 1;
+}
+
+.txtDeco p:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+
+.sent {
+    margin-bottom: 92px;
+}
+
+.write {
+    gap: 24px;
+    align-items: stretch;
+}
+
+.write .left {
+    flex: 1;
+    height: 100%;
+}
+
+.write .right {
+    flex: 2;
+}
+
+.write label {
+    flex: 1;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.write select,
+.write input {
+    flex: 2;
+    font-size: 1.125rem;
+}
+
+.write .left>div {
+    padding: 16px 12px;
+    border-top: 1px solid black;
+}
+
+.write .left>div:last-child {
+    border-bottom: 1px solid black;
+}
+
+.write .right {
+    padding: 16px 12px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.sent button {
+    border: 1px solid black;
+    background-color: var(--bg);
+    padding: 12px 32px;
+    font-size: 1.125rem;
+}
+
+.sent .btnSent {
     display: flex;
     width: 100%;
+    justify-content: end;
+    margin-top: 12px;
 }
 
+.message {
+    gap: 24px;
+}
 
-.btnSent>button {
-    background-color: var(--black);
-    text-align: center;
-    border: none;
-    color: white;
-    margin-top: 12px;
-    margin-left: auto;
-    padding: 12px 32px;
-    font-size: 1.25rem;
+.message>div:first-child {
+    flex: 1;
+}
+
+.message>div:last-child {
+    flex: 3;
+}
+
+.message .optionList option {
+    padding: 12px 12px;
+    font-size: 1.125rem;
+    font-weight: 500;
+    border-top: 1px solid black;
     cursor: pointer;
 }
 
-.optionList {
-    display: flex;
-    margin-bottom: 24px;
-}
+.message .optionList option:last-child {
+    border-bottom: 1px solid black;
 
-.optionList select {
-    font-size: 1.25rem;
-    padding: 4px 12px;
 }
 
 .messageList {
     gap: 12px;
 }
 
+.myMasonryGrid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: -12px;
+}
+
+.myMasonryGridColumn {
+    padding-left: 12px;
+}
+
 .messageBox {
-    background: #f5f5f5;
+    background: #EBEBEB;
     padding: 20px;
     margin-bottom: 12px;
 }
 
 .messageBox p:last-child,
 .messageBox span {
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .messageBox p:nth-child(2) {
-    min-height: 64px;
-    margin: 16px 0 32px;
+    min-height: 30px;
+    margin: 16px 0 24px;
 }
 
-.myMasonryGrid {
-    display: -webkit-box;
-    /* For old Safari browsers */
-    display: -ms-flexbox;
-    /* For IE10 */
-    display: flex;
-    margin-left: -12px;
-    /* gutter size offset */
-    /* width: auto; */
+/* 모바일 css--------------------------- */
+.m_guestBook .txtDeco{
+    font-weight: 1.25rem;
 }
-
-.myMasonryGridColumn {
-    padding-left: 12px;
-    /* gutter size */
-    /* background-clip: padding-box; */
-}
-
-/* 모바일 css--------------------------------------------- */
-.m_sent .personalInfo {
-    gap: 12px;
-    align-items: center;
-    width: 100%;
-}
-.m_sent .personalInfo:first-child{
-    margin-bottom: 24px;
-}
-.m_sent .personalInfo label{
-    flex: 1;
-    display: inline-block;
-    margin: 0;
-}
-.m_sent select,
-.m_sent input{
-    flex: 3;
-    width: 100%;
-}
-.m_sent label,
-.m_sent select,
-.m_sent input {
-    font-size: 1.25rem;
-}
-
-.m_btnSent button {
-    font-size: 1rem;
-    width: 100%;
+.m_optionList{
+    border: 1px solid black;
+    padding: 8px 12px;
+    width:40%;
 }

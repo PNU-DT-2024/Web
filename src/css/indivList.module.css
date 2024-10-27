@@ -1,0 +1,108 @@
+.selectWrap {
+  gap: 24px;
+}
+
+.selectWrap>article:first-child {
+  flex: 1.5;
+}
+
+.selectWrap>article:last-child {
+  flex: 2;
+}
+
+.contentList {
+  justify-content: center;
+}
+
+.contentList div {
+  padding: 16px 24px;
+  justify-content: space-between;
+  border-top: 1px solid black;
+  cursor: pointer;
+  gap: 16px;
+}
+
+
+.lastList {
+  border-bottom: 1px solid black;
+}
+
+.contentList a div {
+  align-items: center;
+  text-overflow: ellipsis;
+}
+
+.contentList a div p:first-child {
+  word-break: keep-all;
+  line-height: 110%;
+  font-size: 1.25rem;
+}
+
+.contentList a div p:last-child {
+  font-size: 0.875rem;
+  color: #a7a7a7;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+.contentList a div:hover p {
+  color: var(--mainColor);
+}
+
+
+.contentThumb {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 32px;
+}
+
+.contentThumb div {
+  width: 55%;
+}
+
+.contentThumb div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+
+.imgAction {
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* .imgAction img,
+.m_imgAction img {
+  width: 100%;
+  object-fit: cover;
+} */
+.imgBase{
+  height: 100%;
+}
+.imgHover {
+  position: relative;
+  z-index: 3;
+
+}
+
+.imgHover {
+  height: 90%;
+}
+
+.imgTrigger {
+  position: absolute;
+  right: -100%;
+  transition: right 0.5s ease-in-out;
+  z-index: 2;
+  visibility: hidden;
+  height: 50%;
+}
+
+.show {
+  right: -40%;
+  visibility: visible;
+}

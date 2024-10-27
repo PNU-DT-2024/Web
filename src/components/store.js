@@ -11,9 +11,24 @@ let teamName = createSlice({
     }
 
 })
-export const {changeName} = teamName.actions;
+let lastVisit = createSlice({
+    name: 'lastVisit',
+    initialState: {
+        visit: 'indiv'
+    },
+    reducers: {
+        saveVisit: (state, action) => {
+            state.visit = action.payload;
+            console.log(state.visit);
+        }
+    }
+
+})
+export const { changeName } = teamName.actions;
+export const { saveVisit } = lastVisit.actions;
 export default configureStore({
     reducer: {
-        teamName: teamName.reducer
+        teamName: teamName.reducer,
+        lastVisit: lastVisit.reducer
     }
 })

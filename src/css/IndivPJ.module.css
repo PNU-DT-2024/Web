@@ -1,10 +1,22 @@
 .memberCard {
     position: relative;
     display: flex;
-  
-  }
-  
-.imgPj{
+    position: relative;
+    padding: 8px;
+
+}
+
+/* .memberCard::after {
+    content: "";
+    position: absolute;
+    top:-12px;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+} */
+
+.imgPj {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -18,14 +30,21 @@
     height: 100%;
     padding: 0 10%;
     color: white;
+
 }
-.memberInfo h2{
+
+.memberInfo h2 {
     line-height: 130%;
     margin-bottom: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+
 .memberInfo p {
     font-size: 1rem;
 }
+
 .Info {
     opacity: 0;
 }
@@ -43,16 +62,19 @@
 
 /* 모바일 css---------------------------------------------- */
 
-.m_card .imgPj{
+.m_card .imgPj {
     filter: brightness(0.6);
 
 }
+
 .m_card .Info {
     opacity: 1;
 }
-.m_Info h2{
+
+.m_Info h2 {
     margin-bottom: 4px;
 }
-.m_Info p{
+
+.m_Info p {
     font-size: 0.875rem;
-} 
+}

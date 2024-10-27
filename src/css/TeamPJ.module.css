@@ -3,11 +3,12 @@
 }
 
 .teamCard {
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
-    padding: 24px 0;
+    gap: 32px;
 
 }
+
 .teamCard:hover .imgPj img {
     filter: brightness(0.6);
 }
@@ -15,17 +16,44 @@
 .teamCard:hover .imgPj div:last-child {
     visibility: visible;
 }
-.teamTitle{
+
+.cardInfo {
     flex: 1;
+    width: 100%;
+    justify-content: space-between;
 }
-.teamTitle p {
+
+.cardInfo div h1 {
+    padding-left: 12px;
+    border-left: 4px solid;
+    border-image: linear-gradient(to bottom, var(--mainColor), var(--subColor)) 1;
+}
+
+.cardInfo p {
+    display: inline-block;
     font-size: 1.125rem;
+    margin-bottom: 12px;
 }
-.teamTitle h1{
+
+.cardInfo h1 {
+    display: inline-block;
     font-weight: 500;
 }
-.teamTitle p, .m_teamTitle p {
-    margin-bottom: 12px;
+
+.cardInfo ul {
+    padding-right: 12px;
+    border-right: 1px solid;
+}
+
+.cardInfo ul li {
+    text-align: right;
+    font-size: 0.75rem;
+
+
+}
+
+.cardInfo ul li:not(:last-child) {
+    margin-bottom: 8px;
 }
 
 .imgPj {
@@ -33,15 +61,16 @@
     position: relative;
     justify-content: center;
     flex: 3;
-    background-color: #f0f0f0;
+    /* background-color: #f0f0f0; */
     padding: 8px;
 
 }
-.imgPj div:first-child{
-    /* background-color: #a7a7a7; */
+
+.imgPj div:first-child {
     align-items: center;
     justify-content: center;
 }
+
 .imgPj img {
     width: 100%;
 }
@@ -59,37 +88,25 @@
     font-size: 1.5rem;
     font-size: 1.25;
 }
-.teamCard.column{
+
+.teamCard.column {
     margin-bottom: 64px;
 }
-.m_card{
+
+.m_card {
     align-items: flex-start;
-    
+
 }
-.m_card .teamTitle{
+
+.m_card .teamTitle {
     margin-bottom: 32px;
 }
-.m_card .teamTitle p{
+
+.m_card .teamTitle p {
     font-size: 1rem;
     margin-bottom: 4px;
 }
-.m_card .teamTitle h1{
+
+.m_card .teamTitle h1 {
     font-size: 2rem;
 }
-/* .moveLink {
-    border: 2px solid var(--black);
-    padding: 12px 24px;
-    position: absolute;
-    bottom: 0;
-    cursor: pointer;
-    font-weight: 500;
-}
-
-.moveLink:hover {
-    background: linear-gradient(0.25turn, #F9AE69, #EB5B5E);
-    border: none;
-}
-
-.moveLink:hover span {
-    color: white;
-} */

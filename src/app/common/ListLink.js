@@ -7,15 +7,15 @@ export default function ListLink({ prevName, nextName, prevURL, nextURL, listURL
     });
     return (
         <div className={`${styles.listLinkWrap} row`}>
-            <Link to={prevURL} className={isMobile ? styles.m_listLink : styles.listLink}>
-                <img src="/img/icon/arrowL.svg" alt="이전" />
+            <Link to={prevURL} className={`${isMobile ? styles.m_listLink : styles.listLink} column`}>
+                {/* <img src="/asset/icon/arrowL.svg" alt="이전" /> */}
                 <p>{prevName}</p>
             </Link>
-            <Link to={listURL} className={isMobile ? styles.m_listLink : styles.listLink}>
+            <Link to={listURL} className={`${isMobile ? styles.m_listLink : styles.listLink} column`}>
                 <p>목록</p>
             </Link>
-            <Link to={nextURL} className={isMobile ? styles.m_listLink : styles.listLink}>
-                <img src="/img/icon/arrowR.svg" alt="다음" />
+            <Link to={nextURL} className={`${isMobile ? styles.m_listLink : styles.listLink} column`}>
+                {/* <img src="/asset/icon/arrowR.svg" alt="다음" /> */}
                 <p>{nextName}</p>
             </Link>
 
@@ -23,10 +23,10 @@ export default function ListLink({ prevName, nextName, prevURL, nextURL, listURL
     )
 }
 export function setPrev(type, data) {
-    const prev = data.index === 0 ? type.list[type.list.length-1] : type.list[data.index - 1];
+    const prev = data.index === 0 ? type.list[type.list.length - 1] : type.list[data.index - 1];
     return prev;
 }
 export function setNext(type, data) {
-    const next = data.index === type.list.length-1 ? type.list[0] : type.list[data.index + 1];
+    const next = data.index === type.list.length - 1 ? type.list[0] : type.list[data.index + 1];
     return next;
 }

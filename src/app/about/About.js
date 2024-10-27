@@ -5,20 +5,14 @@ import Footer from "../common/Footer"
 import styles from "../../css/About.module.css";
 
 export default function About() {
-    // const motionProps = {
-    //     initial: { opacity: 0, y: 50 },
-    //     whileInView: { opacity: 1, y: 0 },
-    //     viewport: { once: false },
-    //     transition: { ease: "easeInOut", duration: 0.8 },
-    // };
     const isMobile = useMediaQuery({
         query: "(max-width:767px)"
     });
     return (
         <div>
-            <Menu page='소개' />
+            <Menu page='INTRODUCTION' />
             <main className="contentsContainer">
-                {isMobile ? <></> : <Title title='소개' />}
+                {isMobile ? <></> : <Title title='INTRODUCTION' />}
                 <section className={styles.aboutWrap}>
                     <article className={isMobile ? 'column' : 'row'}>
                         <div className={styles.title}><p>디자인학과</p></div>
@@ -56,7 +50,7 @@ export default function About() {
                         <div className={styles.prof}>
                             <div>
                                 <div className={styles.imgProf}>
-                                    <img src="/img/profileImg/이화세교수님.webp" alt="이화세 교수님" />
+                                    <img src="/asset/profile/이화세교수님.webp" alt="이화세 교수님" />
                                 </div>
                                 <div>
                                     <p>이화세</p>
@@ -65,7 +59,7 @@ export default function About() {
                             </div>
                             <div >
                                 <div className={styles.imgProf}>
-                                    <img src="/img/profileImg/김철기교수님.webp" alt="김철기 교수님" />
+                                    <img src="/asset/profile/김철기교수님.webp" alt="김철기 교수님" />
                                 </div>
                                 <div>
                                     <p>김철기</p>
@@ -74,7 +68,7 @@ export default function About() {
                             </div>
                             <div >
                                 <div className={styles.imgProf}>
-                                    <img src="/img/profileImg/김태완교수님.webp" alt="김태완 교수님" />
+                                    <img src="/asset/profile/김태완교수님.webp" alt="김태완 교수님" />
                                 </div>
                                 <div>
                                     <p>김태완</p>
@@ -83,7 +77,7 @@ export default function About() {
                             </div>
                             <div >
                                 <div className={styles.imgProf}>
-                                    <img src="/img/profileImg/김태완교수님.webp" alt="홍동진 교수님" />
+                                    <img src="/asset/profile/홍동진교수님.webp" alt="홍동진 교수님" />
                                 </div>
                                 <div>
                                     <p>홍동진</p>

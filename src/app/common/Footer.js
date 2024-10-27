@@ -22,14 +22,14 @@ function Footer() {
 
                     <div className={`${styles.linkSite} row`}>
                         <div className={styles.imgLink}>
-                            <Link to="https://www.instagram.com/pnu.dt.15/" target='_blank'><img src="/img/instaLogo.png" alt="인스타그램" /></Link>
+                            <Link to="https://www.instagram.com/pnu.dt.15/" target='_blank'><img src="/asset/instaLogo.svg" alt="인스타그램" /></Link>
                         </div>
                         <div className={styles.imgLink}>
-                            <Link to="https://www.youtube.com/@pnudt" target='_blank'><img src="/img/youtubeLogo.png" alt="유튜브" /></Link>
+                            <Link to="https://www.youtube.com/@pnudt" target='_blank'><img src="/asset/youtubeLogo.svg" alt="유튜브" /></Link>
                         </div>
                     </div>
                     <div className={styles.linkSite}>
-                        <Link to="https://www.pusan.ac.kr/kor/Main.do" target='_blank'><img src="/img/pnuLogo.png" className={styles.pnuLogo} alt="부산대학교" /></Link>
+                        <Link to="https://www.pusan.ac.kr/kor/Main.do" target='_blank'><img src="/asset/icon/pnuLogo.svg" className={styles.pnuLogo} alt="부산대학교" /></Link>
                     </div>
                 </div>
             </div>
