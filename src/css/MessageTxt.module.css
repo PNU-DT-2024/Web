@@ -1,0 +1,31 @@
+.interTxt p {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 150%;
+  background: linear-gradient(
+    270deg,
+    #f39a67,
+    #ea545e,
+    #f39a67,
+    #ea545e,
+    #f39a67
+  );
+  /* 애니메이션을 부드럽게 하기 위해 배경 크기 조정 */
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* 텍스트 색상을 투명하게 하여 그라데이션을 표시 */
+  color: transparent;
+  /* 지속 시간을 필요에 따라 조정 */
+  animation: gradientScroll 1s linear infinite;
+  position: relative;
+}
+
+@keyframes gradientScroll {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
