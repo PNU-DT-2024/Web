@@ -8,36 +8,40 @@ export default function InterTheme({ name, title, desc, format, step }) {
     });
     return (
         <section className='inter box'>
-            <div className={`article ${isMobile ? 'column' : 'row'}`}>
-                <div className="subject">
-                    <h2>
-                        {isMobile ? 'INTERACTIVE ART' : 'INTER ACTIVE ART'}
-                    </h2>
+            <div className="wrap">
+                <div className={`article ${isMobile ? 'column' : 'row'}`}>
+                    <div className="subject">
+                        <h2>
+                            {isMobile ? 'INTERACTIVE ART' : 'INTER ACTIVE ART'}
+                        </h2>
+                    </div>
+                    <div className="column">
+                        <div className={`exp ${isMobile ? 'column' : 'row'}`}>
+                            <div className="column">
+                                <div className="expTxt">
+                                    <p className="titlePj">{title}</p>
+                                    <p className='description'>{desc}</p>
+                                    <p className="format">{format}</p>
+                                </div>
+                            </div>
+                            <div className='imgInter' >
+                                <img src={`/asset/project/${name}_map.webp`} alt="#" />
+                            </div>
+                        </div>
+                        <div className="stepScroll">
+                            <div className='step row'>
+                                {step.map((item, idx) => (
+                                    <InterStep key={idx} imgUrl={`/asset/project/${name}_step${idx + 1}.webp`} step={item} />
+                                ))}
+                            </div>
+                        </div>
+                        <div className='interVideo'>
+                            hi
+                        </div>
+                    </div>
+
                 </div>
-                <div className="column">
-                    <div className={`exp ${isMobile ? 'column' : 'row'}`}>
-                        <div className="expTxt column">
-                            <p className="titlePj">{title}</p>
-                            <p className='description'>{desc}</p>
-                            <p className="format">{format}</p>
-                        </div>
-                        <div className='imgInter' >
-                            <img src={`/asset/project/${name}_map.webp`} alt="#" />
-                        </div>
-                    </div>
-                    <div style={{ overflowX: 'auto' }}>
-                        <div className='step row'>
-                            {step.map((item, idx) => (
-                                <InterStep key={idx} imgUrl={`/asset/project/${name}_step${idx + 1}.webp`} step={item} />
-                            ))}
-                        </div>
-                    </div>
-                    <div className='interVideo'>
-                        hi
-                    </div>
-                </div>
-            </div>
-            {/* <div className="colum">
+                {/* <div className="colum">
                 <div className={` ${isMobile ? 'column m_inter' : 'row inter'}`}>
                     <div className={isMobile ? 'm_subject column' : 'subject row'}>
                         <h2>{isMobile?'INTERACTIVE ART':'INTER ACTIVE ART'}</h2>
@@ -63,6 +67,7 @@ export default function InterTheme({ name, title, desc, format, step }) {
                     hi
                 </div>
             </div> */}
+            </div>
         </section>
     )
 }

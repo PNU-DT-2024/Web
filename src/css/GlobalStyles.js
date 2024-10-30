@@ -96,13 +96,12 @@ nav, main, footer{
 
 }
 .box{
-  margin: 0 var(--padding) ;
+  padding: 0 var(--padding) ;
   
 }
 .description{
 	line-height:170%;
 	font-size:1rem;
-	word-break : keep-all;
 }
 
 .row{
@@ -116,8 +115,8 @@ nav, main, footer{
 :root{
 	--padding : 200px;
 	--line : #dbdbdb;
-	--mainColor : #ea545e;
-	--subColor : #f39a67;
+	--mainColor : #EF856D;
+	--subColor : #F6AE6A;
 	--bg : #F5F5F5;
 	--black: #121212;
 	

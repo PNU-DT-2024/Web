@@ -11,17 +11,20 @@
     background-color: #ececec;
 }
 
-.pjContainer .box:not(:last-child),
-.m_pjContainer .box:not(:last-child) {
-    border-top: 1px solid black;
-    padding-top: 32px;
+.pjContainer .box,
+.m_pjContainer .box {
     margin-top: 128px;
     margin-bottom: 32px;
 }
 
-.pjContainer section {
-    padding: 0 16px;
+.pjContainer .box .wrap {
+    border-top: 1px solid black;
+    padding-top: 32px;
+    padding: 32px 16px 0 16px;
+
 }
+
+.pjContainer section {}
 
 .mainConcept {
     gap: 64px;
@@ -37,17 +40,22 @@
 }
 
 .article {
-    gap: 64px;
+    gap: 32px;
 
 }
 
-.article>div {
-    /* align-items: flex-start; */
+.article>div:first-child {
+    flex: 1;
+    min-width: 190px;
+}
+
+.article>div:last-child {
+    flex: 5;
 }
 
 .article .exp {
     gap: 32px;
-    margin-bottom: 32px;
+
 }
 
 .article .exp>div:first-child {
@@ -62,7 +70,7 @@
     display: inline-block;
     padding-left: 24px;
     border-left: 6px solid;
-    border-image: linear-gradient(to bottom, var(--mainColor), var(--subColor)) 1;
+    border-image: linear-gradient(to bottom, var(--subColor), var(--mainColor)) 1;
 }
 
 .article .expTxt .titlePj {
@@ -72,16 +80,15 @@
     margin-bottom: 16px;
 }
 
+.mainConcept .wrap {
+    gap: 72px;
+}
+
 .author {
     padding-right: 16px;
     text-align: right;
     border-right: 1px solid black;
     justify-content: flex-end;
-}
-
-.author p,
-.author span {
-    /* color: white; */
 }
 
 .author p:first-child {
@@ -94,12 +101,14 @@
 
 
 .poster .exp {
+
     justify-content: space-between;
     width: 100%;
 }
 
 .poster .exp>div:first-child {
     height: 100%;
+    gap: 24px;
     justify-content: space-between;
 }
 
@@ -137,9 +146,23 @@
     padding: 12px 24px;
 }
 
+.inter .exp {
+    margin-bottom: 48px;
+}
 
 .inter .exp>div {
     flex: 1;
+}
+
+.inter .exp .expTxt p:last-child {
+    margin-top: 12px;
+    color: #a7a7a7;
+    text-transform: lowercase;
+}
+
+.inter .imgInter {
+    display: flex;
+    align-items: center;
 }
 
 .interStep,
@@ -151,7 +174,7 @@
 
 .step {
     gap: 12px;
-    margin-bottom: 32px;
+    margin-bottom: 48px;
 }
 
 .step p {
@@ -160,6 +183,7 @@
 }
 
 .stepNum {
+    word-break: keep-all;
     font-size: 0.875rem;
 }
 
@@ -270,7 +294,7 @@
 .subject>div {
     padding-left: 32px;
     border-left: 8px solid;
-    border-image: linear-gradient(to bottom, var(--mainColor), var(--subColor)) 1;
+    border-image: linear-gradient(to bottom, var(--subColor), var(--mainColor)) 1;
 }
 
 .titlePJ {
@@ -364,7 +388,7 @@
     margin-top: 84px;
 }
 
-.m_pjContainer .mainConcept {
+.m_pjContainer .mainConcept .wrap {
     gap: 28px;
     font-size: 0.75rem;
 }
@@ -376,6 +400,32 @@
 .m_btnPoster button {
     /* display: flex; */
     width: 100%;
+}
+
+.m_pjContainer .inter .exp {
+    margin-bottom: 12px;
+}
+
+.m_pjContainer .inter .exp .expTxt p:last-child {
+    margin-top: 8px;
+    font-size: 0.75rem;
+}
+
+.m_pjContainer .inter .stepScroll {
+    overflow-x: auto;
+}
+
+.m_pjContainer .inter .stepScroll::-webkit-scrollbar {
+    display: none
+}
+
+.m_pjContainer .inter .stepNum {
+    font-size: 0.75rem;
+}
+
+.m_pjContainer .inter .imgStep {
+    /* position: relative; */
+    width: 50vw;
 }
 
 /* .m_concept {
@@ -400,7 +450,7 @@
     margin-bottom: 32px;
     padding-left: 24px;
     border-left: 4px solid;
-    border-image: linear-gradient(to bottom, var(--mainColor), var(--subColor)) 1;
+    border-image: linear-gradient(to bottom, var(--subColor), var(--mainColor)) 1;
 }
 
 .m_subject>h2 {

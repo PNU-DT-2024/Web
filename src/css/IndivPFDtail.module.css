@@ -1,3 +1,7 @@
+/* .pfContainer .box {
+  margin-top: 128px;
+} */
+
 .profile {
   margin: 64px 0 92px;
   gap: 32px;
@@ -74,7 +78,7 @@
   font-weight: 700;
   padding-left: 12px;
   border-left: 4px solid;
-  border-image: linear-gradient(to bottom, var(--mainColor), var(--subColor)) 1;
+  border-image: linear-gradient(to bottom, var(--subColor), var(--mainColor)) 1;
 }
 
 .top .name>div span:nth-child(2) {
@@ -109,9 +113,8 @@
   gap: 12px;
 }
 
-.bottom a {
+.pfContainer .bottom a {
   position: relative;
-  /* Link 요소에 상대적 위치 지정 */
   flex: 1;
   background-color: rgb(107, 107, 107);
   align-items: center;
@@ -201,7 +204,13 @@
   flex: 3;
 }
 
-.m_profile .bottom a {
-  flex: 1;
+.m_profile .bottom {
+  display: flex;
+  align-items: stretch;
+}
+
+.m_profile .bottom .indivPjImg,.m_profile .bottom .teamPjImg {
+
+  height: 150px;
 
 }

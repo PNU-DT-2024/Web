@@ -26,7 +26,7 @@
 .cardInfo div h1 {
     padding-left: 12px;
     border-left: 4px solid;
-    border-image: linear-gradient(to bottom, var(--mainColor), var(--subColor)) 1;
+    border-image: linear-gradient(to bottom, var(--subColor), var(--mainColor)) 1;
 }
 
 .cardInfo p {

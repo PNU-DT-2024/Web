@@ -1,7 +1,5 @@
 .banner,
-.m_banner,
-.interBanner,
-.m_interBanner {
+.interBanner {
     display: flex;
     /* background-color: rgb(247, 247, 247); */
     width: 100%;
@@ -10,6 +8,45 @@
     justify-content: center;
 }
 
+/* 일반 배너 */
+.mainTxtWrap {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.mainTxtWrap div {
+    margin-bottom: 32px;
+}
+
+.mainTxtWrap p {
+    font-size: 0.75rem;
+    line-height: 150%;
+    /* width: 80%; */
+}
+
+.banner span {
+    font-size: 7rem;
+
+}
+
+.banner {
+    justify-content: space-between;
+}
+
+.banner>img {
+    height: calc(100vh - 100px);
+}
+
+.interBtn {
+    padding: 0;
+    margin: 0 24px;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+}
+
+/* 인터 배너 */
 .interBanner {
     position: relative;
     height: calc(100vh - 40px);
@@ -32,10 +69,6 @@
     cursor: pointer;
 }
 
-
-.interBanner>div img {
-    /* height: 100%; */
-}
 
 .interaction {
     position: relative;
@@ -80,8 +113,6 @@
     z-index: 999;
 }
 
-.notice p {}
-
 .interBtnOff {
     background-color: transparent;
     border: none;
@@ -93,50 +124,21 @@
 }
 
 /* 모바일 css----------------------------------- */
-.m_banner span {
+.m_banner {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 92px;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.m_banner img {
+    width: auto;
+    max-width: 100%;
+
+    max-height: calc(100vh - 200px);
+}
+
+.m_banner p {
     font-size: 3rem;
-}
-
-.m_banner .interBtn,
-.m_interBanner .interBtn {
-    width: 48px;
-}
-
-
-/* 일반 배너 */
-.mainTxtWrap {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.mainTxtWrap div {
-    margin-bottom: 32px;
-}
-
-.mainTxtWrap p {
-    font-size: 0.75rem;
-    line-height: 150%;
-    /* width: 80%; */
-}
-
-.banner span {
-    font-size: 7rem;
-
-}
-
-.banner {
-    justify-content: space-between;
-}
-
-.banner>img {
-    height: calc(100vh - 100px);
-}
-
-.interBtn {
-    padding: 0;
-    margin: 0 24px;
-    align-items: center;
-    background-color: transparent;
-    border: none;
 }

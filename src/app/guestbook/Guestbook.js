@@ -9,6 +9,7 @@ import styles from "../../css/Guestbook.module.css";
 
 function Guestbook() {
   const [guestBookEntries, setGuestBookEntries] = useState([]);
+  const [isName, setName] = useState();
   const [from, setFrom] = useState("");
   const [comment, setComment] = useState("");
   const [to, setTo] = useState("");
@@ -55,21 +56,24 @@ function Guestbook() {
     ? guestBookEntries.filter((entry) => entry.to === filter)
     : guestBookEntries;
 
-  const handlePostGuestBook = async () => {
-    try {
-      await guestBookService.postGuestBook(from, comment, to);
-      setFrom("");
-      setComment("");
-      setTo("");
-      loadGuestBookEntries();
-    } catch (error) {
-      console.error("Error posting to guestbook:", error);
-    }
-  };
+    const handlePostGuestBook = async () => {
+      try {
+        const targetTo = to === "" ? "모두에게" : to; // 필터가 빈 문자열인 경우 "모두에게"로 설정
+        await guestBookService.postGuestBook(from, comment, targetTo);
+        setFrom("");
+        setComment("");
+        setTo("");
+        loadGuestBookEntries();
+      } catch (error) {
+        console.error("Error posting to guestbook:", error);
+      }
+    };
+    
 
   // 필터 변경 함수 추가
   const handleFilterChange = (value) => {
     setFilter(value === "모두에게" ? "" : value); // "모두에게"일 경우 필터 해제
+    setName(value);
   };
 
   const breakpointColumnsObj = {
@@ -167,6 +171,7 @@ function Guestbook() {
                   key={name}
                   value={name}
                   onClick={() => handleFilterChange(name)} // onClick 핸들러 수정
+                  className={isName === name && styles.nameOn}
                 >
                   {name}
                 </option>

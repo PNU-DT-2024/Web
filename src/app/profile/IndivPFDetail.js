@@ -30,9 +30,11 @@ function IndivPFDetail() {
                     <div className={styles.left}>
                         <div>
                             <img src={`/asset/profile/${data.name}_profile.webp`} alt={data.name} />
-                            <div className={styles.imgSign}>
-                                <img className={styles.signiture} src="#" alt="" />
-                            </div>
+                            {data.sign &&
+                                <div className={styles.imgSign}>
+                                    <img className={styles.signiture} src={`/asset/profile/${data.name}_sign.webp`} alt="" />
+                                </div>
+                            }
                         </div>
                     </div>
                     <div className={`${styles.right} column`}>
@@ -63,7 +65,7 @@ function IndivPFDetail() {
                             <div className={`description ${styles.free} `}>{data.freeWrite}</div>
                         </div>
                         <div className={`${styles.bottom} ${isMobile ? 'column' : 'row'}`}>
-                            <Link to={`/project/indiv/${data.name}`}>
+                            <Link to={`/project/indiv/${data.name}`} className={styles.link}>
                                 <div className={styles.indivPjImg}>
                                     <img src={`/asset/poster/cover/${data.name}_cover.webp`} alt='' />
                                 </div>

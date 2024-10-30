@@ -36,26 +36,26 @@ export default function IndivSelect({ type }) {
                 ))}
             </article>
             {(isTablet || isMobile) ||
-                <article className={styles.contentThumb}>
+                <article className={`${styles.contentThumb} ${isHovered ? styles.hovered : ''}`}>
                     {isName != null ? (
                         type === 'project' ? (
-                            <div>
-                                <img src={`/asset/poster/cover/${isName}_cover.webp`} alt={isName} />
+                            <div className={styles.imgThumb}>
+                                <img src={`/asset/poster/cover/${isName}_cover.webp`} alt={isName} loading="lazy" />
                             </div>
                         ) : (
                             <div className={styles.imgAction}>
-                                <img src={isHovered ? '/asset/profile/trigger.png' : ""} className={`${styles.imgTrigger} ${isHovered ? styles.show : ""}`}
-                                    styles={{ right: (isHovered ? '-40%' : '-100%'), transition: 'right 0.5s ease-in-out' }} alt="" />
+                                <img src='/asset/profile/trigger.png'
+                                    alt="" loading="lazy" className={`${styles.imgTrigger} ${isHovered&&styles.show}`}/>
                                 <img src={isHovered ? `/asset/profile/SC/${isName}_profileSC.webp` : ""} loading="lazy" alt={isName} className={styles.imgHover} />
                             </div>
                         )
                     ) : (type === 'project' ? (
-                        <div>
-                            <img src={`/asset/poster/poster.png`} alt={isName} />
+                        <div className={styles.imgThumb}>
+                            <img src={`/asset/poster/cover/defalut_cover.webp`} alt={isName} loading="lazy" />
                         </div>
                     ) : (
-                        <div>
-                            <img src="/asset/profile/SC/profileBase.webp" className={styles.imgBase} alt={isName} />
+                        <div className={styles.imgThumb}>
+                            <img src="/asset/profile/SC/profileBase.webp" className={styles.imgBase} alt={isName} loading="lazy" />
                         </div>
                     )
                     )}
@@ -64,3 +64,15 @@ export default function IndivSelect({ type }) {
         </section>
     )
 }
+
+
+
+
+
+
+
+
+
+
+
+

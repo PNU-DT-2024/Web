@@ -6,7 +6,7 @@ import { useMediaQuery } from "react-responsive";
 import SlideMenu from "./SlideMenu";
 import styles from "../../css/Menu.module.css"
 
-function Menu({ page, main }) {
+function Menu({setInter, page, main }) {
     let dispatch = useDispatch();
     const [isVisible, setIsVisible] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
@@ -50,7 +50,7 @@ function Menu({ page, main }) {
             <div className={`${styles.gnbWrap}`}>
                 {isMobile ? <span className={`${styles.m_loc}`}>{page}</span> :
                     <div className={styles.mainLink}>
-                        <NavLink to={'/'} className={({ isActive }) => (isActive ? styles.active : "")}>
+                        <NavLink to={'/'} className={({ isActive }) => (isActive ? styles.active : "")} onClick={()=>setInter(true)}>
                             <p className="ko">버릇</p>
                         </NavLink>
                     </div>

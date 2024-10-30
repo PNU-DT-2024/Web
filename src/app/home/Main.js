@@ -15,6 +15,9 @@ export default function Main() {
   const isMobile = useMediaQuery({
     query: "(max-width:767px)"
   });
+  const isTablet = useMediaQuery({
+    query: "(max-width: 1080px) and (min-width: 768px)"
+});
   const [inter, setInter] = useState(true);
   function startInter() {
     setInter(!inter);
@@ -75,13 +78,13 @@ export default function Main() {
   return (
     isOpen ?
       <div>
-        <Menu main={true} />
+        <Menu main={true} setInter={setInter}/>
         <main>
-          <section>{isMobile || (
+          <section>{isTablet||isMobile? <Banner mode='tablet' onBtnClick={startInter} />:(
             inter === false ? (
               <InterBanner onBtnClick={startInter} />
             ) : (
-              <Banner onBtnClick={startInter} />
+              <Banner mode='web' onBtnClick={startInter} />
             )
           )
           }

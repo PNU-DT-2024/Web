@@ -24,13 +24,9 @@ function App() {
           <Route path="/" element={<Main />}></Route>
           <Route path="/guestbook" element={<Guestbook />}></Route>
           <Route path="/profile" element={<TypeSelect type='profile' />}></Route>
-          <Route path="/profile/indiv" element={<IndivSelect type='profile'/>}></Route>
           <Route path="/profile/indiv/:id" element={<IndivPFDetail />}></Route>,
-          <Route path="/profile/team" element={<Teams type='profile' />}></Route>
           <Route path="/project" element={<TypeSelect type='project'/>}></Route>
-          <Route path="/project/indiv" element={<IndivSelect type='project'/>}></Route>
           <Route path="/project/indiv/:id" element={<IndivPJDetail />}></Route>
-          <Route path="/project/team" element={<Teams type='project' />}></Route>
           <Route path="/project/team/:id" element={<TeamPJDetail />}></Route>
           <Route path="/about" element={<About />}></Route>
           {/* <Route path="/team-profile/:id" element={<TeamPF />}></Route> */}

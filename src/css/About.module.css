@@ -21,7 +21,7 @@
     word-break: break-all;
     padding-left: 12px;
     border-left: 6px solid;
-    border-image: linear-gradient(to bottom, var(--mainColor), var(--subColor)) 1;
+    border-image: linear-gradient(to bottom, var(--subColor), var(--mainColor)) 1;
 }
 
 .aboutWrap article>div:last-child {

@@ -13,7 +13,7 @@
     font-size: 1.85rem;
     padding-left: 24px;
     border-left: 4px solid;
-    border-image: linear-gradient(to bottom, var(--mainColor), var(--subColor)) 1;
+    border-image: linear-gradient(to bottom, var(--subColor), var(--mainColor)) 1;
 }
 
 .teamMember {
