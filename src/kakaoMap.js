@@ -1,11 +1,7 @@
 import React from "react";
-import { useMediaQuery } from "react-responsive";
 import { Map, MapMarker } from "react-kakao-maps-sdk";
 
 function KakaoMap({width, height}) {
-  const isMobile = useMediaQuery({
-    query: "(max-width : 767px)"
-  });
   return (
     <Map
       center={{ lat: 35.17402959698592, lng: 129.12938121809884 }} // 설정된 위도, 경도

@@ -2,49 +2,61 @@
     gap: 64px;
 }
 
+.teamTitle {
+    width: 70%;
+    justify-content: space-between;
+    word-break: keep-all;
+}
+
 .teamTitle h1 {
-    margin-bottom: 24px;
+    margin-bottom: 12px;
+    font-size: 1.85rem;
+    padding-left: 24px;
+    border-left: 4px solid;
+    border-image: linear-gradient(to bottom, var(--subColor), var(--mainColor)) 1;
 }
 
+.teamMember {
+    justify-content: space-between;
+    gap: 24px;
+}
 
-.teamMember>p {
-    margin-bottom: 24px;
-    font-size: 1.25rem;
-    font-weight: 500;
-}
-.teamMember p:last-child, .m_teamMember p:last-child{
-    text-align: right;
-}
-.member {
+.teamMember .member {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    width: 80%;
+    width: 70%;
     gap: 12px;
 }
 
+.member p {
+    text-align: right;
+}
 .imgMember {
     margin-bottom: 12px;
-    min-height: 100px;
     overflow: hidden;
 }
 
 .imgMember img {
     width: 100%;
-    height: 60%;
     object-fit: cover;
 }
 
 .btnMove {
     display: flex;
     justify-content: center;
+    margin-top: auto;
+ 
+}
+
+.btnMove a {
     margin-left: auto;
-    border: 2px solid var(--black);
+    border: 1px solid var(--black);
     padding: 12px 24px;
     cursor: pointer;
     font-weight: 500;
 }
 
-.btnMove:hover {
+.btnMove:hover a {
     background: linear-gradient(0.25turn, #F9AE69, #EB5B5E);
     border: none;
 }
@@ -57,27 +69,31 @@
 .m_teamCard {
     gap: 48px;
 }
-.m_teamCard .teamTitle h1{
+.m_teamCard .teamTitle{
+    width: 100%;
+}
+.m_teamCard .teamTitle h1 {
     font-size: 2rem;
     margin-bottom: 12px;
 }
-.m_teamMember .imgMember{
+
+.m_teamCard .imgMember {
     margin-bottom: 4px;
 }
-.m_teamMember p{
+
+.m_teamCard .member p {
     font-size: 0.75rem;
 }
-.m_teamMember>p {
-    font-size: 0.875rem;
-    margin-bottom: 12px;
-    font-weight: 500;
-}
 
-.m_teamMember .member {
+.m_teamCard .member {
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(2, 1fr);
-    gap:12px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
 }
 
-.m_teamMember .member>a {}
+.m_teamCard .btnMove a{
+    text-align: center;
+    width: 100%;
+    margin: 0;
+}

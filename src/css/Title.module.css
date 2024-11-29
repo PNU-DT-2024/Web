@@ -1,19 +1,13 @@
-.loc,
-.m_loc {
-
-    white-space: nowrap;
-    align-items: center;
-}
-
 .loc {
+    position: relative;
+    padding: 0 0 12px 0 ;
+    white-space: nowrap;
     margin-bottom: 72px;
 }
 
-.m_loc {
-    margin-bottom: 32px;
-}
-
-.loc h1,
-.m_loc h1{
-    margin-right: 24px;
+.loc p {
+    display: inline-block;
+    font-size: 1rem;
+    padding-bottom: 4px;
+    border-bottom: 2px solid black;
 }

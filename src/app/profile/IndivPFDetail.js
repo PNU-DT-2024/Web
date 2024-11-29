@@ -1,15 +1,14 @@
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import { useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import { useDispatch } from "react-redux";
 import { changeName } from "../../components/store";
 import Menu from "../common/Menu";
 import Footer from "../common/Footer";
 import indivData from "../../components/indiv.json";
-import Title from "../common/Title";
 import ListLink, { setPrev, setNext } from "../common/ListLink";
 import styles from "../../css/IndivPFDtail.module.css";
+import { useEffect } from "react";
 
 function IndivPFDetail() {
     let dispatch = useDispatch();
@@ -20,71 +19,68 @@ function IndivPFDetail() {
     const data = indivData.list.find(item => item.name === id);
     const prev = setPrev(indivData, data);
     const next = setNext(indivData, data);
-
+    useEffect(() => {
+        console.log(`/asset/profile/${data.name}_profile.webp`)
+    })
     return (
         <div>
-            <Menu page='작가' />
+            <Menu page='profile' />
             <main className={styles.pfContainer}>
-                <section className={`box ${styles.content} ${styles.profile} ${isMobile ? 'column ' : 'row'}`}>
-                    <div className={isMobile ? styles.m_porfileImg : styles.profileImg}>
-                        <img src="/img/profileImg/박정혜_profile.jpg" alt="작가 사진" />
-                        {isMobile &&
-                            <div className={styles.m_signImg}>
-                                <img className={styles.signiture} src="#" alt="#" />
-                            </div>}
-                    </div>
-                    <div className={`${isMobile ? styles.m_txtWrap : styles.txtWrap} column`}>
-                        <div className={`${styles.nameWrap} row`}>
-                            <div className={`${isMobile ? styles.m_name : styles.name} column`}>
-                                <Link to={'/profile/team'} onClick={() => dispatch(changeName(data.team))}>
-                                    <span>{data.team}</span>
-                                </Link>
-                                <div className='row'>
-                                    <span>{data.name}</span>
-                                    <span>{data.engName}</span>
-                                </div>
-                            </div>
-                            {isMobile ? <></> :
-                                <div className={styles.signImg}>
-                                    <img className={styles.signiture} src="#" alt="#" />
+                <section className={`box ${isMobile ? styles.m_profile : styles.profile} ${isMobile ? 'column ' : 'row'}`}>
+                    <div className={styles.left}>
+                        <div>
+                            <img src={`/asset/profile/${data.name}_profile.webp`} alt={data.name} />
+                            {data.sign &&
+                                <div className={styles.imgSign}>
+                                    <img className={styles.signiture} src={`/asset/profile/${data.name}_sign.webp`} alt="" />
                                 </div>
                             }
                         </div>
-                        <div className={`${styles.sns} ${isMobile ? 'column' : 'row'}`}>
-                            <div className={isMobile?'row':''}>
-                                <span>SNS</span>
-                                <Link to={`https://www.instagram.com/${data.insta}`} target='_blank'>
-                                    <span>{data.insta}</span>
-                                </Link>
-                            </div>
-                            <div className={isMobile?'row':''}>
-                                <span>e-mail</span>
-                                <span>{data.email}</span>
-                            </div>
-                        </div>
-                        <div className="description">{data.freeWrite}</div>
                     </div>
-                </section>
-                <section className={`box ${styles.content}`}>
-                    <div className={`${styles.MoveLinkWrap} ${isMobile ? 'column' : 'row'}`}>
-                        <div className={isMobile ? styles.m_moveLink : ''}>
-                            <Link to={`/project/indiv/${data.name}`}>
-                                <div className={styles.linkMove}>
-                                    <div className={styles.indivPjImg}>
-                                        <img src="#" alt="#" />
+                    <div className={`${styles.right} column`}>
+                        <div className={styles.top}>
+                            <div className={`${styles.name} row`}>
+                                <div className='column'>
+                                    <Link to={'/profile/team'} onClick={() => dispatch(changeName(data.team))}>
+                                        <span>{data.team}</span>
+                                    </Link>
+                                    <div className='row'>
+                                        <span>{data.name}</span>
+                                        <span>{data.engName}</span>
                                     </div>
-                                    <p>개인 작품</p>
+                                </div>
+                            </div>
+                            <div className={`${styles.sns} ${isMobile ? 'column' : 'row'}`}>
+                                <div className={isMobile && 'row'}>
+                                    <span>SNS</span>
+                                    <Link to={`https://www.instagram.com/${data.insta.slice(1)}`} target='_blank'>
+                                        <span>{data.insta}</span>
+                                    </Link>
+                                </div>
+                                <div className={isMobile && 'row'}>
+                                    <span>e-mail</span>
+                                    <span>{data.email}</span>
+                                </div>
+                            </div>
+                            <div className={`description ${styles.free} `}>{data.freeWrite}</div>
+                        </div>
+                        <div className={`${styles.bottom} ${isMobile ? 'column' : 'row'}`}>
+                            <Link to={`/project/indiv/${data.name}`} className={styles.link}>
+                                <div className={styles.indivPjImg}>
+                                    <img src={`/asset/poster/cover/${data.name}_cover.webp`} alt='' />
+                                </div>
+                                <div>
+                                    <p>INDIVIDUAL PROJECT</p>
                                     <p>{data.mainTitle}</p>
                                 </div>
                             </Link>
-                        </div>
-                        <div className={isMobile ? styles.m_moveLink : ''}>
-                            <Link to={`/project/team/${data.team}`}>
-                                <div className={styles.linkMove}>
-                                    <div className={styles.teamPjImg}>
-                                        <img src="#" alt="#" />
-                                    </div>
-                                    <p>팀 작품</p>
+
+                            <Link to={`/project/team/${data.team}`} className={styles.link}>
+                                <div className={styles.teamPjImg}>
+                                    <img src="#" alt='' />
+                                </div>
+                                <div>
+                                    <p>TEAM PROJECT</p>
                                     <p>{data.teamTitle}</p>
                                 </div>
                             </Link>
@@ -92,7 +88,7 @@ function IndivPFDetail() {
                     </div>
                 </section>
                 <div className={`box ${styles.content}`}>
-                    <ListLink prevName={prev.name} nextName={next.name} prevURL={`/profile/indiv/${prev.name}`} nextURL={`/profile/indiv/${next.name}`} listURL="/profile/indiv" />
+                    <ListLink prevName={prev.name} nextName={next.name} prevURL={`/profile/indiv/${prev.name}`} nextURL={`/profile/indiv/${next.name}`} listURL="/profile" />
                 </div>
             </main>
             <Footer />

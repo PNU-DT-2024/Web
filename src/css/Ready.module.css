@@ -1,0 +1,127 @@
+.ready {
+    position: relative;
+    margin: 36px;
+    height: calc(100vh - 72px);
+}
+.ready>section {
+    flex: 1;
+    padding: 36px;
+}
+
+.left {
+    /* background-color: red; */
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid black;
+}
+
+.left div {
+    width: 70%;
+}
+
+.left div img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.left p {
+    font-size: 4rem;
+}
+
+.right {
+    justify-content: space-between;
+    /* background-color: blue; */
+}
+
+.top {
+    gap: 24px;
+}
+
+.top p:first-child {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.top p:last-child {
+    font-size: 1.25rem;
+}
+
+.dday .day {
+    font-size: 3rem;
+    font-weight: 700;
+    
+}
+
+.dday .time  {
+    font-size: 1.25rem;
+    margin:  0 0 12px 12px;
+}
+.bottom{
+    gap: 24px;
+}
+.bottom>div {
+    align-items: start;
+}
+
+.bottom>div {
+   gap: 12px;
+}
+
+.bottom>div>div:first-child {
+    flex: 1;
+    font-size: 1.25rem;
+    font-weight: 500;
+
+}
+
+.bottom>div>div:last-child {
+    display: flex;
+    flex: 2;
+
+}
+
+.bottom .info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+/* 모바일 css----------------- */
+.m_ready {
+    position: relative;
+    margin: 20px;
+    gap: 32px;
+}
+
+.m_ready .left {
+    border: none;
+}
+
+.m_ready .right {
+    gap: 64px;
+}
+.m_ready .right .top{
+    gap: 12px;
+}
+.m_ready .right .top p:last-child{
+font-size: 1.125rem;
+line-height: 130%;
+}
+.m_ready .dday {
+    text-align: center;
+    padding-bottom: 32px;
+    border-bottom: 1px solid black;
+}
+
+.m_ready .dday .day {
+    font-size: 2.5rem;
+}
+
+.m_ready .dday .time {
+    font-size: 1.25rem;
+}
+
+.m_ready .bottom {
+    gap: 16px;
+}

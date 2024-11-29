@@ -74,6 +74,9 @@ table {
 	cursor:pointer;}
 //------------------------------------------------------------------------------
 * { font-family: 'Spoqa Han Sans Neo', 'sans-serif'; }
+body{
+	background-color : var(--bg) ;
+}
 .eng{font-family: 'Times New Roman', Times, serif; }
 .ko{    font-family: "sandoll-jebi2", sans-serif;
     font-weight: 700;}
@@ -98,7 +101,7 @@ nav, main, footer{
 }
 .description{
 	line-height:170%;
-	font-size:1.125rem;
+	font-size:1rem;
 }
 
 .row{
@@ -112,8 +115,9 @@ nav, main, footer{
 :root{
 	--padding : 200px;
 	--line : #dbdbdb;
-	--mainColor : #ea545e;
-	--subColor : #f39a67;
+	--mainColor : #EF856D;
+	--subColor : #F6AE6A;
+	--bg : #F5F5F5;
 	--black: #121212;
 	
 }

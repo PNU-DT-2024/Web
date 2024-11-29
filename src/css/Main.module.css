@@ -1,157 +1,211 @@
-/* .hScreen {
-  display: flex;
+.closeMain {
   position: relative;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
 }
 
-.subTitle {
+.btnRemove {
   position: absolute;
-  left: 24px;
-  top: 15%;
-  color: #a7a7a7;
-  font-size: 0.75rem;
-  white-space: nowrap;
+  right: 0;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: transparent;
+  cursor: default;
 }
 
-.imgMainPoster,
-.imgMap,
-.imgMember,
-.imgDT {
-  background-color: #a7a7a7;
+.section {
+  display: flex;
+  margin-bottom: 128px;
+  min-height: calc(100vh - 76px);
+  align-items: center;
+  justify-content: center;
+}
+
+.section>div {
+  width: 100%;
 }
 
 .title {
-  margin-bottom: 32px;
-}
-
-
-.contentWrap {
-  justify-content: center;
-  text-align: left;
-  margin-top: 64px;
-}
-
-.contentWrap:first-child>p {
-  margin-top: 48px;
-  color: #a7a7a7;
-} */
-
-/* ---------------------------------------------------------------------- */
-.nav {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 3;
-}
-
-.imgMainPoster {
   display: flex;
-  margin-top: 64px;
-  align-items: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  padding: 24px 12px;
+  border-bottom: 1px solid black;
+  gap: 12px;
 }
 
-.imgMainPoster img {
-  max-height: calc(100vh - 100px);
-  max-width: calc(100vw - 100px);
+.title p:first-child {
+  font-size: 3rem;
+  font-weight: 500;
 }
 
-.imgMember {
-  flex-shrink: 0;
-  width: 30%;
+.title p:nth-of-type(2n) {
+  color: #a7a7a7;
+  font-weight: 300;
 }
 
-.imgMember img {
-  width: 100%;
+.content {
+  display: flex;
+  padding: 24px 12px;
 }
 
-.textBox p:not(:last-child) {
+.boxTxt p:not(:last-child) {
   margin-bottom: 12px;
 }
 
-
-.opening {
-  width: calc(100vw - 100px);
-  max-height: calc(100vh - 150px);
-  /* background-color: antiquewhite; */
-  margin-top: 64px;
+.outLine {
+  margin-left: auto;
+  width: 50%;
 }
 
-.memberDT,
-.m_memberContainer {
+.twoRow {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+
+.twoRow>div {
+  flex: 1;
+
+}
+
+.mainPoster .left {
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
-/* .memberDT .imgMember {
-  width: 50%;
-  margin-right: 64px;
-} */
-.memberDT {
-  gap: 64px;
+.mainPoster .left video {
+  width: 80%;
 }
 
-.memberDT>div {
+.mainPoster .right {
+  justify-content: space-between;
+}
+
+.mainPoster .right .boxTxt {
+  margin-bottom: 48px;
+}
+
+.detail>div {
+  padding: 12px 12px;
+  border-top: 1px solid black;
+
+}
+
+.detail>div:first-child {
+  margin-bottom: 24px;
+}
+
+.detail>div div {
+  gap: 8px;
+}
+
+.detail>div div p:first-child {
   flex: 1;
-  gap: 64px;
 }
 
-.imgMember img {
-  width: 100%;
-  height: 100%;
+.detail>div div p:last-child {
+  flex: 2;
 }
 
-.memberTxt {
-  text-align: center;
-  word-break: keep-all;
+.detail>div p:first-child {
+  font-size: 1.25rem;
+  font-weight: 500;
 }
 
-
-
-.imgMap {
-  margin-right: 64px;
-}
-
-.loc {
+.opening {
   justify-content: center;
 }
 
-.locInfo {
-  /* display: block; */
-  white-space: nowrap;
-}
-
-.locInfo p {
-  margin-bottom: 0;
-}
-
-.locInfo>p {
-  font-size: 1.5rem;
-  margin-bottom: 24px;
-}
-
-/* 모바일css------------------------------------------------------ */
-/* .m_imgPoster {
-  flex-shrink: 0;
-  height: 50vw;
-  margin-bottom: 32px;
-}
-
-.m_imgPoster img {
+.opening video {
   width: 100%;
-  height: 100%;
 }
 
-.m_memberDT {
-  align-items: center;
+.memberDT .left img {
+  width: 100%;
 }
 
-.m_memberDT .imgMember {
-  width: 70%;
-  margin-bottom: 24px;
+.memberDT>div:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+
 }
 
 
-.m_imgMap {
-  margin-bottom: 32px;
-} */
+.memberDT .right div {
+  padding: 12px;
+  border-top: 1px solid black;
+  justify-content: space-between;
+  gap: 12px;
+  word-break: keep-all;
+
+}
+
+.memberDT .right div:last-child {
+  border-bottom: 1px solid black;
+}
+
+.memberDT .right p:first-child {
+  font-weight: 500;
+
+}
+.memberDT .right p:last-child {
+  line-height: 110%;
+}
+.map .left {
+  display: flex;
+  justify-content: center;
+}
+
+.map .right {
+  text-align: right;
+  word-break: keep-all;
+  
+}
+
+.map .right>p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+  line-height: 120%;
+}
+
+.map .right div p:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+/* 모바일 css------------------------------------------------- */
+.m_section {
+  margin-bottom: 92px;
+  min-height: auto;
+}
+
+.m_twocolumn {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.m_section .title {
+  flex-direction: column;
+  align-items: start;
+  gap: 8px;
+}
+
+.m_section .title p:first-child {
+  font-size: 1.75rem;
+}
+
+.m_section .title p:nth-child(2) {
+  font-size: 0.75rem;
+}
+
+.m_section .outLine {
+  width: 100%;
+}
+
+.m_section .mainPoster .right .detail>div:first-child {
+  margin-bottom: 12px;
+}

@@ -6,12 +6,12 @@
 
 .teamList .teamCardOpen,
 .teamList .teamCardClose {
-    border-right: 6px solid var(--black);
+    border-right: 3px solid var(--black);
 }
 
 .teamList .teamCardOpen:first-child,
 .teamList .teamCardClose:first-child {
-    border-left: 6px solid var(--black);
+    border-left: 3px solid var(--black);
 }
 
 .teamCardOpen {
@@ -33,7 +33,6 @@
 .teamCardClose {
     color: #a7a7a7;
 
-
     flex: 1;
     cursor: pointer;
     justify-content: center;
@@ -42,11 +41,12 @@
 .teamList .teamCardClose {
     align-items: center;
     text-align: center;
-    padding: 24px 8px;
+    padding: 24px 4px;
+    max-width: 64px;
 }
 
 .teamCardClose:hover {
-    color: var(--black);
+    color: var(--mainColor);
     font-weight: 700;
 }
 
@@ -56,7 +56,7 @@
 }
 
 .teamList .closeTeam p {
-    font-size: 1.5rem;
+    font-size: 1rem;
     inline-size: auto;
     writing-mode: vertical-rl;
 }
@@ -64,12 +64,12 @@
 /* 모바일 css----------------- */
 .m_teamList .teamCardOpen,
 .m_teamList .teamCardClose {
-    border-top: 6px solid var(--black);
+    border-top: 3px solid var(--black);
 }
 
 .m_teamList .teamCardOpen:last-child,
 .m_teamList .teamCardClose:last-child {
-    border-bottom: 6px solid var(--black);
+    border-bottom: 3px solid var(--black);
 }
 
 .m_teamList .teamCardOpen {
@@ -78,8 +78,8 @@
 }
 
 .m_teamList .teamCardClose {
-    padding: 24px 24px;
+    padding: 12px 24px;
 }
 .m_teamList .closeTeam p{
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
